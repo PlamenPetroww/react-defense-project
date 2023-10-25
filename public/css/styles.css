@@ -369,7 +369,6 @@ p {
 
 .new-produkt {
   width: 100%;
-  padding-bottom: 1em;
   text-align: center;
 }
 
@@ -639,9 +638,9 @@ p {
 
 .ontainer {
   width: 100%;
-  height: 450px;
   background-color:#333739;
   display: flex;
+  flex-direction: column;
 }
 
 .anmelden__tok {
@@ -672,6 +671,7 @@ p {
   height: 400px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
 }
 
 /* --> BESTELL-FORMULAR MOBILE<-- */
