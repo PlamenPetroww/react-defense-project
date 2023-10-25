@@ -1,0 +1,1206 @@
+/* --> FARBEN <--  */
+
+/*
+Dunkel Grau : #524F51
+Hell Grau : #666966
+Dunkel Weiss : #F6F8FA
+Schwarz : #100F0F
+Blau : #4084FF
+
+ */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #F0F0F0, 0 0 10px #F0F0F0;
+}
+
+.leistungs__mobile,
+.image__director__mobile,
+.customers__director__speek__mobile,
+.image__director__name__mobile,
+.img__name__mobile {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  width: 80%;
+  max-width: 1170px;
+  margin: 0 auto;
+  background-color: #524F51;
+}
+
+/* -- TYPOGRAPHY -- */
+
+h2,
+.h2 {
+  font-size: 30px;
+}
+
+p {
+  color: #767070;
+  line-height: 170%;
+  font-size: 14px;
+}
+
+/* --> NAVIGATIONS-LEISTE <-- */
+
+.wrapper__nav {
+  display: flex;
+  width: 80%;
+  max-width: 1170px;
+  justify-content: space-around;
+  margin: 0 auto;
+  background-color: #191d20;
+  height: 32px;
+  flex-direction: row-reverse;
+}
+
+.wrapper__nav .wrapper-media {
+  display: flex;
+  max-width: 1170px;
+  background-color: #191d20;
+}
+
+.wrapper__nav .wrapper-media-sl {
+  width: 40px;
+  height: 40px;
+  margin-left: 1px;
+}
+
+.wrapper__nav ul {
+  display: flex;
+  margin: 0;
+}
+
+.wrapper__nav li {
+  display: block;
+  padding-left: 1em;
+}
+
+.wrapper__nav li .icons {
+  color: white;
+}
+
+.wrapper__nav .wagen {
+  min-width: 225px;
+  color: #F6F8FA;
+  cursor: pointer;
+  font-family: "Raleway";
+  font-weight: regular;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper__nav .wrapper-richtung span {
+  text-decoration: none;
+}
+
+/* --> ABOUT-US <-- */
+
+.hauptmenu {
+  display: flex;
+  width: 80%;
+  height: 50px;
+  background-color: #F6F8FA;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.hauptmenu>* {
+  flex-grow: 10;
+  text-align: center;
+}
+
+.hauptmenu>span {
+  padding-top: 13px;
+}
+
+.logo {
+  width: 200px;
+  height: 105px;
+  background-color: #F6F8FA;
+  border-radius: 0 0 60% 60%/0 0 15% 15%;
+  padding-top: 20px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px 20px #666966;
+  position: relative;
+  font-size: 2em;
+}
+
+.logo-1 {
+  height: 78px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: logo-spin infinite 20s linear;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transition: filter 500ms ease-in-out;
+}
+
+.hauptmenu .logo-1 div {
+  font-size: 0.7em;
+  font-weight: normal;
+  color: black;
+  width: 300px;
+  padding-top: 0.3em;
+}
+
+.hauptmenu .logo-1 .bolded {
+  font-weight: bold;
+}
+
+.hauptmenu .logo-1 div span {
+  width: 7ch;
+  height: 2px;
+  background-color: red;
+  display: block;
+  margin: 0.5em auto;
+}
+
+.hauptmenu .logo-1 .kl-logo {
+  font-size: 12px;
+}
+
+.kl-logo {
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+
+/* --> UNSERE-BURGER <-- */
+
+
+.wrapper-signature {
+  background-color: #666966;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.wrapper-signature>img {
+  width: 50%;
+  left: 0;
+}
+
+.signature1 {
+  flex: 1;
+  height: auto;
+  margin-left: 0;
+  margin-right: auto;
+  width: 40%;
+}
+
+.signature2 {
+  flex: 1;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+.wrapper-links {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #100F0F;
+  text-align: center;
+  padding-top: 6px;
+  font-weight: bold;
+  color: #100F0F;
+  line-height: 150%;
+  margin-top: 146px;
+}
+
+.wrapper-rechts {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #100F0F;
+  text-align: center;
+  padding-top: 6px;
+  color: #100F0F;
+  margin-top: 146px;
+}
+
+/* DAS-SIND-WIR */
+
+.wrapper {
+  background-color: #F6F8FA;
+}
+
+.leistungs {
+  background-color: #F6F8FA;
+  padding: 4em 0;
+}
+
+.button {
+  background: none;
+  color: #ff1200;
+  border: 1px solid #ff1200;
+  font-weight: bold;
+  display: block;
+  transition: all .3s;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 40px;
+  border-radius: 0.3em;
+}
+
+.button__grau {
+  background: none;
+  color: #191d20;;
+  border: 1px solid #191d20;
+  font-weight: bold;
+  display: block;
+  transition: all .3s;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 40px;
+  border-radius: 0.3em;
+}
+
+.button__grau:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #e21000;
+  border: 1px solid #e21000;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.button--solid {
+  color: #fff;
+  border: 1px solid #ff1200;
+  background-color: #ff1200;
+}
+
+.wrapper .leistungs__article {
+  width: 80%;
+}
+
+.leistungs__article>div {
+  flex: 1;
+}
+
+.leistungs p {
+  margin-bottom: 40px;
+}
+
+.leistungs__image img {
+  width: 100%;
+  height: auto;
+}
+
+.leistungs__text--right {
+  padding-left: 30px;
+}
+
+.leistungs-box {
+  flex-basis: 40%;
+  color: #666966;
+  padding: 2rem 4rem;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 150%;
+  font-family: 'Raleway';
+  color: #100F0F;
+}
+
+.wrapper .leistungs-box h2 {
+  font-weight: 900;
+}
+
+.leistung-box-empfohlen {
+  flex-basis: 40%;
+}
+
+.btn-typ-1 {
+  background-color: #3D3F45;
+  border: 2px solid #3D3F45;
+  color: #FFF;
+  border-radius: 15%;
+  padding: .4rem .5rem;
+  transition: border .5s ease-in-out;
+}
+
+.text-xs {
+  font-weight: normal;
+}
+
+.btn-typ-1:hover {
+  border: 2px solid #FFF;
+  font-weight: normal;
+}
+
+/* --> NEW-PRODUKTE <-- */
+
+.new-produkt {
+  width: 100%;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.new-produkt-title {
+  margin: 0;
+  padding-top: 1em;
+}
+
+.new-produkt .new-produkt-p-center {
+  text-align: center;
+}
+
+/* --> NEUE-GERICHTE-PHOTO <-- */
+
+.wrapper {
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.wrapper .wrapper_box {
+  position: relative;
+  width: 320px;
+  height: 520px;
+  border: 2px solid red;
+  margin-top: 30px;
+}
+
+.wrapper .img__klein {
+  width: 316px;
+}
+
+.wrapper .wrapper_box .title_justify {
+  margin: 0;
+  padding: 30px;
+  text-align: justify;
+  font-family: "Raleway";
+  font-weight: bold;
+}
+
+.wrapper .wrapper_box .title_italic {
+  margin: 0;
+  padding-left: 30px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.wrapper .wrapper_box .p_justify {
+  margin: 0;
+  padding: 30px 30px 0 30px;
+}
+
+.wrapper .wrapper_box_color {
+  background-color: #191d20;
+  color: #ffffff;
+  position: relative;
+  width: 320px;
+  height: 520px;
+  margin-top: 30px;
+}
+
+.wrapper .wrapper_box_color .title_justify {
+  margin: 0;
+  padding: 30px;
+  text-align: justify;
+  font-family: "Raleway";
+  font-weight: bold;
+}
+
+.wrapper .wrapper_box_color .title_italic {
+  margin: 0;
+  padding-left: 30px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.wrapper .wrapper_box_color .p_justify {
+  margin: 0;
+  padding: 30px 30px 0 30px;
+  color: #ffffff;
+}
+
+.wrapper_box_button {
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #191d20;
+  color: #ffffff;
+  border: none;
+  font-family: 'Raleway';
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  bottom: -25px;
+  left: 58px;
+}
+
+.wrapper_box_button_color {
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff1200;
+  color: #ffffff;
+  border: none;
+  font-family: 'Raleway';
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  bottom: -25px;
+  left: 58px;
+}
+
+/* --> GÄSTE-ZUFRIEDENHEIT <--  */
+
+.customers {
+  width: 100%;
+  height: 500px;
+  background-color: #191d20;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 100px;
+  position: relative;
+}
+
+.customers .customers-title-center {
+  font-family: "Raleway";
+  padding-top: 50px;
+}
+
+.customers .customers-p-center {
+  color: #9d9c9d;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.customers .image-director {
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+  border-radius: 50%;
+  background-color: #cacaca;
+  left: 15%;
+  color: #d3d3d4;
+  position: absolute;
+}
+
+.customers .image-director-name {
+  font-family: "Raleway";
+  margin-bottom: 0;
+  position: absolute;
+  left: 15%;
+  bottom: 28%;
+  font-size: 16px;
+}
+
+.customers .image-city {
+  color: red;
+  position: absolute;
+  left: 16.5%;
+  bottom: 20%;
+}
+
+.customers .customers-director-speek {
+  width: 700px;
+  height: auto;
+  border: 1px solid #404a51;
+  padding: 50px 30px;
+  margin-left: 150px;
+}
+
+.customers .customers-circle {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  justify-content: center;
+}
+
+.customers .customers-circle .customers-circle-7 {
+  width: 100%;
+  min-width: 15px;
+  min-height: 15px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #4c5359;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.customers .customers-circle .customers-circle-7-red {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ff1200;
+  border-radius: 50%;
+  background-color: #ff1200;
+}
+
+.customers .image-director div {
+  margin: 2px;
+  min-width: 15px;
+  min-height: 15px;
+}
+
+/* --> BESTELL-FORMULAR <-- */
+
+.flex-container-chefs {
+  display: flex;
+  width: 100%;
+  height: 520px;
+  background-color: #333739;
+  flex-direction: column;
+  padding-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.flex-container-chefs .best-form-gericht {
+  color: #F6F8FA;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 21%;
+}
+
+.best-form {
+  width: 200px;
+  height: auto;
+  background-color: #FFFFFF;
+  min-width: 350px;
+  padding: 2em;
+  position: absolute;
+  margin-top: 50px;
+  left: 20%;
+}
+
+#kontakt-formular-center {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#kontakt-formular input {
+  width: 100%;
+  padding: .5rem;
+  font-size: 0.7rem;
+  margin: 15px 30px 15px 30px;
+  font-family: "Raleway";
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button--red--absenden {
+  width: 200px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-family: "Raleway";
+  padding: 0;
+  margin-top: 30px;
+}
+
+.ontainer {
+  width: 100%;
+  height: 450px;
+  background-color:#333739;
+  display: flex;
+}
+
+.anmelden__tok {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #333739;
+}
+
+.anmelden {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  color: #FFF;
+}
+
+.formular {
+  width: 200px;
+  height: auto;
+  background-color: #FFFFFF;
+  min-width: 350px;
+  padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ontainer .formular {
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --> BESTELL-FORMULAR MOBILE<-- */
+
+.customers__mobile {
+  display: none;
+}
+
+/* --> UNTERE-LOGO <-- */
+
+.untere-logo {
+  display: flex;
+  width: 100%;
+  background-color: #00aced;
+  justify-content: center;
+  font-size: .8rem;
+  color: #FFFFFF;
+}
+
+.untere-logo .untere-logo-text {
+  width: 60%;
+  line-height: 170%;
+  display: flex;
+}
+
+.untere-logo img {
+  width: 40px;
+  height: 35px;
+}
+
+.untere-logo p {
+  text-align: center;
+  color: #FFFFFF;
+  text-align: justify;
+}
+
+/* --> FOOTER <-- */
+
+.footer {
+  color: grey;
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #F6F8FA;
+  font-family: "Padauk";
+  font-size: .8rem;
+}
+
+.footer .footer__menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  flex: 1 1 70%;
+}
+
+.footer .title-P {
+  display: flex;
+  color: #333739;
+  flex: 1 1 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer__menu>a {
+  flex-grow: 1;
+  text-decoration: none;
+  color: grey;
+}
+
+
+/* --> MEDIA-QUERRY <-- */
+
+
+
+@media (max-width: 1276px) {
+
+  .wrapper>.wagen {
+    padding-right: 0;
+  }
+
+  .logo,
+  .logo-1,
+  .kl.logo {
+    display: none;
+  }
+
+  .flex-container-chefs>img {
+    width: 626px;
+    height: 241px;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 1220px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1086px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1030px) {
+
+  .wrapper .wrapper_box_color,
+  .wrapper_box {
+    width: 250px;
+  }
+
+  .wrapper_box_button_color,
+  .wrapper_box_button {
+    left: 60px;
+    width: 120px;
+    height: 40px;
+    bottom: -22px;
+  }
+
+  .wrapper .wrapper_box_color img {
+    width: 247px;
+  }
+
+  .wrapper .wrapper_box {
+    width: 250px;
+  }
+
+  .wrapper .img__klein {
+    width: 247px;
+  }
+
+  .customers .image-director {
+    left: 7%;
+  }
+
+  .customers .image-director-name {
+    left: 65px;
+  }
+
+  .customers .image-city {
+    left: 8.5%;
+  }
+
+  .customers .customers-director-speek {
+    width: 600px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .wrapper,
+  .wrapper__nav {
+    width: 90%;
+  }
+
+  .wrapper .wrapper-media {
+    width: 90%;
+    padding-left: 0;
+  }
+
+  .wrapper-media>.wagen {
+    padding-right: 0;
+  }
+
+  .wrapper .wrapper_box_color img,
+  .wrapper .wrapper_box img {
+    width: 60%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 247px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+    top: 20%;
+    left: 10%;
+  }
+
+  .logo-text-2 {
+    font-size: 16px;
+    top: 20%;
+    right: 10%;
+  }
+
+  .hauptmenu {
+    display: flex;
+    width: 90%;
+    height: 50px;
+    background-color: #F6F8FA;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 890px) {
+
+  .leistungs p {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 25px;
+    margin-top: 0;
+  }
+
+}
+
+@media (max-width: 884px) {
+
+  .wrapper .wrapper_box_color,
+  .wrapper_box {
+    width: 220px;
+  }
+
+  .wrapper .wrapper_box_color img,
+  .wrapper .wrapper_box img {
+    width: 217px;
+  }
+
+  .wrapper .wrapper_box {
+    width: 220px;
+  }
+
+  .wrapper .img__klein {
+    width: 217px;
+  }
+
+  .wrapper_box_button_color,
+  .wrapper_box_button {
+    width: 150px;
+    left: 34px;
+  }
+
+}
+
+@media(max-width: 826px) {
+
+  .customers .customers-director-speek {
+    width: 500px;
+  }
+
+}
+
+@media (max-width: 778px) {
+
+  .signature {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer .title-P {
+    margin-left: 0;
+  }
+
+  .footer .footer-end {
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 755px) {
+
+  .wrapper .wrapper_box_color,
+  .wrapper_box {
+    width: 200px;
+  }
+
+  .wrapper .wrapper_box_color img,
+  .wrapper .wrapper_box img {
+    width: 197px;
+  }
+
+  .wrapper .wrapper_box {
+    width: 200px;
+  }
+
+  .wrapper .img__klein {
+    width: 197px;
+  }
+
+  .wrapper_box_button_color,
+  .wrapper_box_button {
+    width: 150px;
+    left: 25px;
+  }
+
+}
+
+@media(max-width: 720px) {
+
+  .customers .image-director {
+    left: 1%;
+  }
+
+  .customers .image-director-name {
+    left: 1%;
+  }
+
+  .customers .image-city {
+    left: 3.5%;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .wrapper {
+    padding-left: 0;
+  }
+
+  .wrapper>.wagen {
+    background-color: #524F51;
+    width: 100%;
+    min-width: 225px;
+  }
+
+  .wrapper .wrapper_box,
+  .wrapper .wrapper_box_color {
+    height: 530px;
+  }
+
+  .customers .customers-director-speek {
+    width: 400px;
+    height: auto;
+  }
+
+}
+
+@media (max-width: 687px) {
+
+  @media (max-width: 755px) {
+
+    .wrapper .wrapper_box_color,
+    .wrapper_box {
+      width: 170px;
+      height: 600px;
+    }
+
+    .wrapper .wrapper_box {
+      height: 600px;
+    }
+
+    .wrapper .wrapper_box_color img,
+    .wrapper .wrapper_box img {
+      width: 167px;
+    }
+
+    .wrapper .wrapper_box {
+      width: 170px;
+    }
+
+    .wrapper .img__klein {
+      width: 167px;
+    }
+
+    .wrapper_box_button_color,
+    .wrapper_box_button {
+      width: 130px;
+      left: 100px;
+    }
+
+  }
+
+}
+
+@media(max-width: 670px) {
+
+  .leistungs {
+    display: none;
+  }
+
+  .leistungs__mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 650px) {
+  .wrapper__nav .wrapper-media {
+    padding-left: 0;
+  }
+
+  .wrapper-media>.wagen {
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 615px) {
+
+  .customers .image-city {
+    bottom: 7%;
+  }
+
+  .customers .image-director-name {
+    left: -7%;
+    bottom: 14%;
+  }
+
+  .image-director,
+  .customers-director-speek,
+  .image-director-name,
+  .image-city {
+    display: none;
+  }
+
+  .customers {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .image__director__mobile {
+    display: block;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+    border: 1px solid red;
+    margin-top: 20px;
+  }
+
+  .image__director__mobile p {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  .image__director__name__mobile {
+    display: block;
+    display: flex;
+  }
+
+  .image__director__name__mobile .img__director__name__mobile {
+    flex: 0 0 33%;
+  }
+
+  .image__director__name__mobile .img__city__mobile {
+    flex: 0 0 33%;
+  }
+
+  .img__name__mobile {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid red;
+    border-radius: 50%;
+    background-color: #cacaca;
+    color: #d3d3d4;
+    position: absolute;
+    top: 41%;
+    right: 5%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .container .wir {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .container .wir:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .container .wir .img-food,
+  .container .wir .content {
+    width: 100%;
+  }
+
+  .container .wir .content {
+    height: 200px;
+  }
+
+}
+
+@media (max-width: 585px) {
+
+  .wrapper .wrapper_box_color,
+  .wrapper .wrapper_box {
+    width: 80%;
+    height: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapper .wrapper_box {
+    height: 520px;
+  }
+
+  .wrapper .wrapper_box_color img,
+  .wrapper .wrapper_box img {
+    width: 80%;
+    bottom: -22px;
+  }
+
+}
+
+@media (max-width: 580px) {
+
+  .customers .customers-director-speek {
+    width: 300px;
+  }
+
+}
+
+@media (max-width: 535px) {
+
+  .img__name__mobile {
+    top: 38%;
+  }
+  
+  .best-form {
+    left: 14%;
+  }
+
+  .flex-container-chefs .best-form-gericht {
+    left: 17%;
+  }
+
+}
