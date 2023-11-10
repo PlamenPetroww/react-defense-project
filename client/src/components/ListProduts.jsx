@@ -16,7 +16,7 @@ const SiteMainGerichte = () => {
                 Mehr Info
                 </button>
             </div>
-            <div className="wrapper_box_color">
+            <div className="wrapper_box">
                 <img src="../public/img/team-400-266.jpg" alt="" />
                 <h2 className="title_justify">Awesome cheese</h2>
                 <h3 className="title_italic">

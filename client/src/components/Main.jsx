@@ -2,7 +2,7 @@ import Hauptmenu from "./Hauptmenu";
 import MainLogo from "./MainLogo";
 import MainRegister from "./Register";
 import SiteMainTitle from "./SiteMainTitle";
-import ListProducts from "./ListProcuts";
+import ListProducts from "./ListProduts";
 import Welcome from "./Welcome";
 
 
