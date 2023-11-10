@@ -1,11 +1,11 @@
 import Footer from './components/Footer';
 import Hauptmenu from './components/Hauptmenu';
 import Header from './components/Header';
-import MainLogo from './components/Main-Logo';
+import Main from './components/Main';
+import MainLogo from './components/MainLogo';
 import MainRegister from './components/Register';
-import SiteMainGerichte from './components/Site-Main-Gerichte';
-import SiteMainGuest from './components/Site-Main-Guest';
-import SiteMainTitle from './components/Site-Main-Title';
+import SiteMainGerichte from './components/ListProcuts';
+import SiteMainTitle from './components/SiteMainTitle';
 import Welcome from './components/Welcome';
 
 function App() {
@@ -14,13 +14,10 @@ function App() {
     <div>
         
         <Header />
-        <Hauptmenu />
-        <Welcome />
-        <SiteMainTitle />
-        <SiteMainGerichte />
-        <SiteMainGuest />
-        <MainRegister />
-        <MainLogo />
+        <main>
+            <Main />
+        </main>
+        
         <Footer />
 
   {/* DAS-SIND-WIR-MOBILE */}
