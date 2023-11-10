@@ -5,12 +5,13 @@ const SiteMainGerichte = () => {
                 <img className="img__klein" src="../public/img/team-400-266.jpg" alt="" />
                 <h2 className="title_justify">Spring Salat</h2>
                 <h3 className="title_italic">
-                Post by Chef / 02 Oktober 2016 / Comments: 5
+                Post by Chef / 02 Oktober 2016
                 </h3>
                 <p className="p_justify">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+                <p className="p_justify email">email : </p>
                 <button className="button wrapper_box_button" type="button" name="button">
                 Mehr Info
                 </button>
@@ -19,12 +20,13 @@ const SiteMainGerichte = () => {
                 <img src="../public/img/team-400-266.jpg" alt="" />
                 <h2 className="title_justify">Awesome cheese</h2>
                 <h3 className="title_italic">
-                Post by Chef / 02 Oktober 2016 / Comments: 3
+                Post by Chef / 02 Oktober 2016
                 </h3>
                 <p className="p_justify">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+                <p className="p_justify email">email : </p>
                 <button
                 className=" button__grau wrapper_box_button_color"
                 type="button"
@@ -37,12 +39,13 @@ const SiteMainGerichte = () => {
                 <img className="img__klein" src="../public/img/team-400-266.jpg" alt="" />
                 <h2 className="title_justify">Rustical Pizza</h2>
                 <h3 className="title_italic">
-                Post by Chef / 02 Oktober 2016 / Comments: 6
+                Post by Chef / 02 Oktober 2016
                 </h3>
                 <p className="p_justify">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+                <p className="p_justify email">email : </p>
                 <button className="button wrapper_box_button" type="button" name="button">
                 Mehr Info
                 </button>

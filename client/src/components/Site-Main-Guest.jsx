@@ -4,8 +4,8 @@ const SiteMainGuest = () => {
             <div className="customers">
                 <div className="customers-title">
                 <h2 className="customers-title-center">
-                    <spann className="text-xs">Unsere</spann> Zufriedene{" "}
-                    <spann className="text-xs">gäste</spann>
+                    <span className="text-xs">Unsere</span> Zufriedene{" "}
+                    <span className="text-xs">gäste</span>
                 </h2>
                 <p className="customers-p-center">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, magnam

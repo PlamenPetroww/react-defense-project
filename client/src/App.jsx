@@ -31,7 +31,7 @@ function App() {
                 </div>
                 <div className="leistungs__text leistungs__text--right">
                     <h2>
-                    <spann className="text-xs">Was ist</spann> BurgerHouse ?
+                    <span className="text-xs">Was ist</span> BurgerHouse ?
                     </h2>
                 </div>
                 <p>
@@ -48,7 +48,7 @@ function App() {
                     </div>
                 <div className="leistungs__text leistungs__text--right">
                     <h2>
-                    <spann className="text-xs">Was ist</spann> BurgerHouse ?
+                    <span className="text-xs">Was ist</span> BurgerHouse ?
                     </h2>
                 </div>
                 <p>
