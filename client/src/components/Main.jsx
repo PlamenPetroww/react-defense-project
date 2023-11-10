@@ -2,8 +2,9 @@ import Hauptmenu from "./Hauptmenu";
 import MainLogo from "./MainLogo";
 import MainRegister from "./Register";
 import SiteMainTitle from "./SiteMainTitle";
-import ListProducts from "./ListProduts";
+import ListProducts from "./ListProducts";
 import Welcome from "./Welcome";
+import ProductListItem from "./ProductListItem";
 
 
 const Main = () => {
@@ -12,6 +13,7 @@ const Main = () => {
         <Hauptmenu />
         <Welcome />
         <SiteMainTitle />
+        <ProductListItem />
         <ListProducts />
         <MainRegister />
         <MainLogo />

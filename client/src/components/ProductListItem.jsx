@@ -1,10 +1,20 @@
-import ListProducts from './ListProduts'
+import { useEffect, useState } from 'react';
+import ListProducts from './ListProducts';
+import * as productService from '../services/productService';
 
 const ProductListItem = () => {
+
+    const [products, setProducts] = useState([]);
+
+    console.log(products)
+
+    useEffect(() => {
+        productService.getAll()
+            .then(result => setProducts(result));
+    }, [])
+
     return(
-        <section class="wrapper">
             <ListProducts />
-        </section>
     );
 };
 
