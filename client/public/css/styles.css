@@ -489,6 +489,41 @@ p {
   left: 58px;
 }
 
+.btn-new {
+  margin-top: 7em;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.modal {
+  width: 45rem;
+  max-height: 90vh;
+  margin: auto;
+  border-radius: 20px;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+  z-index: 30;
+  margin-top: 50px;
+}
+
 /* --> GÄSTE-ZUFRIEDENHEIT <--  */
 
 .customers {
@@ -620,7 +655,8 @@ p {
 }
 
 #kontakt-formular input {
-  width: 100%;
+  max-width: 150px;
+  min-width: 150px;
   padding: .5rem;
   font-size: 0.7rem;
   margin: 15px 30px 15px 30px;
@@ -628,17 +664,29 @@ p {
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
+  color: yellow;
+}
+
+#kontakt-formular textarea {
+    width: 300px;
+    height: auto;
 }
 
 .button--red--absenden {
-  width: 200px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   background-color: red;
   color: white;
   font-weight: bold;
   font-family: "Raleway";
   padding: 0;
-  margin-top: 30px;
+  margin-top: 1em;
+}
+
+.button--red--cancel {
+  width: 100px;
+  height: 30px;
+  margin-top: 1em;
 }
 
 .ontainer {
@@ -664,20 +712,22 @@ p {
 }
 
 .formular {
-  width: 200px;
+  width: 150px;
   height: auto;
   background-color: #FFFFFF;
   min-width: 350px;
-  padding: 2em;
   margin-left: auto;
   margin-right: auto;
 }
 
 .ontainer .formular {
+  display: flex;
+  justify-content: center;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em;
+  width: 50%;
 }
 
 /* --> BESTELL-FORMULAR MOBILE<-- */

@@ -6,6 +6,7 @@
     "lastName": "Asenov",
     "email": "asen@gmail.com",
     "createdAt": "2023-11-01T07:22:00.358Z",
+    "updatedAt": "2023-11-02T08,34:00.358Z",
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj2RIOah4ZWF_d-wrNXYfVyrUHyl-ky239Wb3UwM5eiug44SOqT3K1wnq1rqRij5MWlPM&usqp=CAU",
     "description": "The best Salat"
   },
@@ -16,6 +17,7 @@
     "lastName": "User",
     "email": "anotheruser@example.com",
     "createdAt": "2023-11-01T07:22:00.358Z",
+    "updatedAt": "2023-11-02T08,34:00.358Z",
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAPPhL_I70akPSTLTRct_5KzV892LJZHsh6V0WSDWukuEk4q3z2N03HLRd_M-rh1fpIYo&usqp=CAU",
     "description": "The best Burger"
   },
@@ -26,6 +28,7 @@
     "lastName": "Doe",
     "email": "johndoe@example.com",
     "createdAt": "2023-11-01T07:22:00.358Z",
+    "updatedAt": "2023-11-01T07:22:00.358Z",
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4cv1WHrsqfysivwzdDDmya1moS2E5MrTA3fFSSZ-YbXRiRwEC_4LcaaWggzhk7RECV6c&usqp=CAU",
     "description": "The best Fleisch"
   }

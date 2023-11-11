@@ -6,6 +6,7 @@ const ListProducts = ({
     lastName,
     email,
     createdAt,
+    updatedAt,
     imageUrl,
     description
 }) => {
@@ -15,6 +16,7 @@ const ListProducts = ({
                 <h2 className="title_justify">{title}</h2>
                 <h3 className="title_italic">
                 Post by {firstName} {lastName} / {formatIsoDateToHumanReadable(createdAt)}
+                <br />Updated at: {formatIsoDateToHumanReadable(updatedAt)}
                 </h3>
                 <p className="p_justify">
                 {description}

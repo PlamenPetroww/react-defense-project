@@ -5,5 +5,28 @@ export const getAll = async () => {
     const result = await response.json();
     const data = Object.values(result);
     return data;
-    
 };
+
+export const create = async (data) => {
+
+    const body = {
+        title: data.title,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        imageUrl: data.imageUrl,
+        description: data.description,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    }
+
+    const response = await fetch(baseUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+    })
+    const result = await response.json();
+    return result;
+}
