@@ -8,6 +8,8 @@ const SiteMainTitle = () => {
                 quibusdam numquam eveniet <br />consectetur exercitationem earum.Lorem ipsum dolor sit amet, consectetur
                 adipisicing elit.</p>
             </div>
+
+            <button className="button btn-new" type="button">Create New Salat/Burgers</button>
         </article>
     )
 };

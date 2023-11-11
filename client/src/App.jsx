@@ -53,22 +53,6 @@ function App() {
             </div>
         </section>
 
-
-
-	{/* BESTELL-FORMULAR */}
-
-        
-
-        
-
-        
-
-	    {/* UNTERE-LOGO */}
-
-        
-
-	    {/* FOOTER */}
-
         
   </div>
   )

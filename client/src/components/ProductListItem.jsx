@@ -6,15 +6,26 @@ const ProductListItem = () => {
 
     const [products, setProducts] = useState([]);
 
-    console.log(products)
-
     useEffect(() => {
         productService.getAll()
             .then(result => setProducts(result));
     }, [])
 
     return(
-            <ListProducts />
+        <section className="wrapper">
+            {products.map(product => (
+                <ListProducts 
+                    key={product._id}
+                    title={product.title}
+                    firstName={product.firstName}
+                    lastName={product.lastName}
+                    email={product.email}
+                    createdAt={product.createdAt}
+                    imageUrl={product.imageUrl}
+                    description={product.description}
+                />
+            ))}
+        </section>
     );
 };
 
