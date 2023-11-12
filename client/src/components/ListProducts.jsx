@@ -1,4 +1,6 @@
+import { useState } from "react";
 import formatIsoDateToHumanReadable from "../utils/isoData";
+import ShowProductInfoModal from "./ShowProductInfoModal";
 
 const ListProducts = ({
     title,
@@ -9,8 +11,19 @@ const ListProducts = ({
     updatedAt,
     imageUrl,
     description,
-    onInfo
 }) => {
+
+    const [showInfo, setShowInfo] = useState(false);
+
+    const hideShowInfoModal = () => {
+        setShowInfo(false);
+    }
+
+    const infoProductClickHandler = () => {
+        setShowInfo(true);
+        console.log('on info')
+    }
+
     return (
             <div className="wrapper_box">
                 <img className="img__klein" src={imageUrl} alt={`${firstName}'s profile`} />
@@ -23,9 +36,14 @@ const ListProducts = ({
                 {description}
                 </p>
                 <p className="p_justify email">email : {email}</p>
-                <button className="button wrapper_box_button" type="button" name="button" onClick={onInfo}>
+                <button className="button wrapper_box_button" type="button" name="button" onClick={infoProductClickHandler}>
                 Mehr Info
                 </button>
+                {showInfo && (
+                <ShowProductInfoModal 
+                    onInfo={infoProductClickHandler}
+                    onClose={hideShowInfoModal}
+                />)}
             </div>
     )
 };

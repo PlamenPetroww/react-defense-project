@@ -7,7 +7,6 @@ const ProductListItem = () => {
 
     const [products, setProducts] = useState([]);
     const [showCreate, setShowCreate] = useState(false);
-    const [showInfo, setShowInfo] = useState(false);
 
     useEffect(() => {
         productService.getAll()
@@ -21,16 +20,8 @@ const ProductListItem = () => {
 
     const hideCreateProduct = () => {
         setShowCreate(false);
-    };
-
-    const infoProductClickHandler = () => {
-        setShowInfo(true);
-        console.log('on info')
     }
-
-    const hideShowInfoModal = () => {
-        setShowCreate(false);
-    }
+    
 
     const productCreateHandler = async (e) => {
         e.preventDefault();
@@ -61,19 +52,13 @@ const ProductListItem = () => {
                     description={product.description}
                 />
             ))}
-            <button className="button btn-new" type="button" onClick={createProductClickHandler}>Create New Salat/Burgers</button>
+            <button className="button btn-new" type="button" onClick={createProductClickHandler}>Create New Salat/Burgers</button>            
             {showCreate && (
                 <CreateProduct
                 onClose={hideCreateProduct}
                 onProductCreate={productCreateHandler}
                 />
             )}
-
-            {showInfo && (
-            <ShowProductInfoModal 
-            onInfo={infoProductClickHandler}
-            onClose={hideShowInfoModal}
-            />)}
         </section>
     );
 };

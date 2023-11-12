@@ -1,6 +1,9 @@
+import { useState } from "react";
+
 const ShowProductInfoModal = ({
     onClose,
 }) => {
+
     return(
         <section className="ontainer overlay" >
             <div className="backdrop" onClick={onClose}></div>
@@ -8,7 +11,7 @@ const ShowProductInfoModal = ({
                 <h2 className="anmelden">Check the full Information</h2>
             </div>
             <div className="formular modal">
-                <form onSubmit={onProductCreate} id="kontakt-formular">
+                <form id="kontakt-formular">
                     <div className="kontakt-formular-center">
                     <label htmlFor="title" className="screenreader" />
                     <input type="text" name="title" placeholder="Title" />
