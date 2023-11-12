@@ -8,7 +8,8 @@ const ListProducts = ({
     createdAt,
     updatedAt,
     imageUrl,
-    description
+    description,
+    onInfo
 }) => {
     return (
             <div className="wrapper_box">
@@ -22,7 +23,7 @@ const ListProducts = ({
                 {description}
                 </p>
                 <p className="p_justify email">email : {email}</p>
-                <button className="button wrapper_box_button" type="button" name="button">
+                <button className="button wrapper_box_button" type="button" name="button" onClick={onInfo}>
                 Mehr Info
                 </button>
             </div>
