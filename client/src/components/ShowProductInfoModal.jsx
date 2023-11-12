@@ -14,22 +14,22 @@ const ShowProductInfoModal = ({
                 <form id="kontakt-formular">
                     <div className="kontakt-formular-center">
                     <label htmlFor="title" className="screenreader" />
-                    <input type="text" name="title" placeholder="Title" />
+                    <input type="text" name="title"/>
                     <div>
                     <label htmlFor="firstName" className="screenreader" />
-                    <input type="text" name="firstName" placeholder="First Name"/>
+                    <input type="text" name="firstName"/>
                     </div>
                     <div>
                     <label htmlFor="lastName" className="screenreader" />
-                    <input type="text" name="lastName" placeholder="Last Name"/>
+                    <input type="text" name="lastName"/>
                     </div>
                     <label htmlFor="email" className="screenreader" />
-                    <input type="text" name="email" placeholder="Email" />
+                    <input type="text" name="email"/>
                     <div>
                     <label htmlFor="imageUrl" className="screenreader" />
-                    <input type="text" name="imageUrl" placeholder="Your favourites dish photo"/>
+                    <input type="text" name="imageUrl"/>
                     </div>
-                    <textarea name="description" htmlFor="description" className="screenreader textarea-create" placeholder="Your description" />               
+                    <textarea name="description" htmlFor="description" className="screenreader textarea-create"/>               
                     <button className="button button--red--absenden" type="submit" name="absendenbutton">Subscribed Here</button>
                     <button className="button button--red--cancel" type="submit" name="absendenbutton" onClick={onClose}>Cancel</button>
                     </div>
