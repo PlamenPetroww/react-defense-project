@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import * as productService from '../services/productService';
 
 const ShowProductInfoModal = ({
     onClose,
+    productId
 }) => {
+
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+        productService.getOne(productId)
+        .then(result => setProduct(result))
+        .catch(error => console.log(error));
+    }, [productId]);
 
     return(
         <section className="ontainer overlay" >
@@ -11,29 +21,13 @@ const ShowProductInfoModal = ({
                 <h2 className="anmelden">Check the full Information</h2>
             </div>
             <div className="formular modal">
-                <form id="kontakt-formular">
-                    <div className="kontakt-formular-center">
-                    <label htmlFor="title" className="screenreader" />
-                    <input type="text" name="title"/>
-                    <div>
-                    <label htmlFor="firstName" className="screenreader" />
-                    <input type="text" name="firstName"/>
-                    </div>
-                    <div>
-                    <label htmlFor="lastName" className="screenreader" />
-                    <input type="text" name="lastName"/>
-                    </div>
-                    <label htmlFor="email" className="screenreader" />
-                    <input type="text" name="email"/>
-                    <div>
-                    <label htmlFor="imageUrl" className="screenreader" />
-                    <input type="text" name="imageUrl"/>
-                    </div>
-                    <textarea name="description" htmlFor="description" className="screenreader textarea-create"/>               
-                    <button className="button button--red--absenden" type="submit" name="absendenbutton">Subscribed Here</button>
-                    <button className="button button--red--cancel" type="submit" name="absendenbutton" onClick={onClose}>Cancel</button>
-                    </div>
-                </form>
+                
+                <p>${product.title}</p>
+                <img src={product.imageUrl} alt={product.firstName} />
+                <p>${product.firstName}</p>
+                <p>${product.lastName}</p>
+                <p>${product.description}</p>
+                <p>${product.email}</p>
             </div>
         </section>
     );

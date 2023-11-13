@@ -28,7 +28,6 @@ const ProductListItem = () => {
 
     const productInfoClickHandler = async (productId) => {
         setSelectedProduct(productId);
-        console.log(productId)
         setShowInfo(true);
     };
     
