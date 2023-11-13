@@ -3,6 +3,7 @@ import formatIsoDateToHumanReadable from "../utils/isoData";
 import ShowProductInfoModal from "./ShowProductInfoModal";
 
 const ListProducts = ({
+    productId,
     title,
     firstName,
     lastName,
@@ -11,18 +12,18 @@ const ListProducts = ({
     updatedAt,
     imageUrl,
     description,
+    onProductClick
 }) => {
 
     const [showInfo, setShowInfo] = useState(false);
 
     const hideShowInfoModal = () => {
         setShowInfo(false);
-    }
+    };
 
-    const infoProductClickHandler = () => {
-        setShowInfo(true);
-        console.log('on info')
-    }
+    const infoProductHandler = () => {
+        onProductClick(productId);
+    };
 
     return (
             <div className="wrapper_box">
@@ -36,7 +37,7 @@ const ListProducts = ({
                 {description}
                 </p>
                 <p className="p_justify email">email : {email}</p>
-                <button className="button wrapper_box_button" type="button" name="button" onClick={infoProductClickHandler}>
+                <button className="button wrapper_box_button" type="button" name="button" onClick={infoProductHandler}>
                 Mehr Info
                 </button>
                 {showInfo && (

@@ -2,11 +2,15 @@ import { useEffect, useState } from 'react';
 import ListProducts from './ListProducts';
 import * as productService from '../services/productService';
 import CreateProduct from './CreateProduct';
+import ShowProductInfoModal from './ShowProductInfoModal';
 
 const ProductListItem = () => {
 
     const [products, setProducts] = useState([]);
     const [showCreate, setShowCreate] = useState(false);
+    const [showInfo, setShowInfo] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState(null)
+
 
     useEffect(() => {
         productService.getAll()
@@ -21,6 +25,12 @@ const ProductListItem = () => {
     const hideCreateProduct = () => {
         setShowCreate(false);
     }
+
+    const productInfoClickHandler = async () => {
+        setSelectedProduct(productId);
+        console.log(productId)
+        setShowInfo(true);
+    };
     
 
     const productCreateHandler = async (e) => {
@@ -32,16 +42,21 @@ const ProductListItem = () => {
         } catch (error) {
             console.log(error)
         }
-        
-
         setShowCreate(false);
     }
 
     return(
         <section className="wrapper">
-            {products.map(product => (
+            {showInfo && (
+                <ShowProductInfoModal 
+                    onClose={() => setShowInfo(false)}
+                    productId={selectedProduct}
+                />
+            )}
+            {products.map((product) => (
                 <ListProducts 
                     key={product._id}
+                    productId={product._id}
                     title={product.title}
                     firstName={product.firstName}
                     lastName={product.lastName}
@@ -50,6 +65,7 @@ const ProductListItem = () => {
                     updatedAt={product.updatedAt}
                     imageUrl={product.imageUrl}
                     description={product.description}
+                    onProductClick={productInfoClickHandler}
                 />
             ))}
             <button className="button btn-new" type="button" onClick={createProductClickHandler}>Create New Salat/Burgers</button>            
