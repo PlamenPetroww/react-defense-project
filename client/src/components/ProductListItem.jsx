@@ -26,7 +26,7 @@ const ProductListItem = () => {
         setShowCreate(false);
     }
 
-    const productInfoClickHandler = async () => {
+    const productInfoClickHandler = async (productId) => {
         setSelectedProduct(productId);
         console.log(productId)
         setShowInfo(true);
@@ -65,7 +65,7 @@ const ProductListItem = () => {
                     updatedAt={product.updatedAt}
                     imageUrl={product.imageUrl}
                     description={product.description}
-                    onProductClick={productInfoClickHandler}
+                    onProductClick={() => productInfoClickHandler(product._id)}
                 />
             ))}
             <button className="button btn-new" type="button" onClick={createProductClickHandler}>Create New Salat/Burgers</button>            
