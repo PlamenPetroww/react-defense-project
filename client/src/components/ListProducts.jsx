@@ -12,10 +12,12 @@ const ListProducts = ({
     updatedAt,
     imageUrl,
     description,
-    onProductClick
+    onProductClick,
+    onDeleteClick,
 }) => {
 
     const [showInfo, setShowInfo] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     const hideShowInfoModal = () => {
         setShowInfo(false);
@@ -24,6 +26,10 @@ const ListProducts = ({
     const infoProductHandler = () => {
         onProductClick(productId);
     };
+
+    const deleteClickHandler = () => {
+        onDeleteClick(productId)
+    }
 
     return (
             <div className="wrapper_box">
@@ -42,8 +48,8 @@ const ListProducts = ({
                 </button>
                 {showInfo && (
                 <ShowProductInfoModal 
-                    onInfo={infoProductClickHandler}
                     onClose={hideShowInfoModal}
+                    onDeleteClick={deleteClickHandler}
                 />)}
             </div>
     )
