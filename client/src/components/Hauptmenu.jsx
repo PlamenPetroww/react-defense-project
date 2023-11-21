@@ -1,12 +1,16 @@
+import { Link } from "react-router-dom";
+
+       
 const Hauptmenu = () => {
+            
     return (
+        
         <section>
+            
             <div className="hauptmenu">
-                <p>Home</p>
+                <Link to="/" className="no-underline"><p>Home</p></Link>
                 <span>✶</span>
-                <p>Über uns</p>
-                <span>✶</span>
-                <p>Menü</p>
+                <Link to="/gallery" className="no-underline"><p>Gallery</p></Link>
                 <h1 className="logo">
                 <div className="logo-1">
                     <div className="bolded">
@@ -17,11 +21,9 @@ const Hauptmenu = () => {
                     </div>
                 </div>
                 </h1>
-                <p>Gallery</p>
+                <Link to="/about" className="no-underline"><p>About Us</p></Link>
                 <span>✶</span>
-                <p>Blog</p>
-                <span>✶</span>
-                <p>Kontakt</p>
+                <Link to="/contacts" className="no-underline"><p>Contacts</p></Link>
             </div>
         </section>
     )

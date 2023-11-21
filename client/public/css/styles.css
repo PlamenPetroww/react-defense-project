@@ -191,6 +191,10 @@ p {
   font-size: 13px;
 }
 
+.hauptmenu .no-underline {
+  text-decoration: none;
+}
+
 /* --> UNSERE-BURGER <-- */
 
 

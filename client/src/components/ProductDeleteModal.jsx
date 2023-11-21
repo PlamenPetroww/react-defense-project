@@ -4,7 +4,6 @@ const ProductDeleteModal = ({
 }) => {
 
     const deleteClickHandler = () => {
-        debugger
         onDeleteClick(productId);
         console.log(productId)
     }

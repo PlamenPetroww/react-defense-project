@@ -17,7 +17,7 @@ const ListProducts = ({
 }) => {
 
     const [showInfo, setShowInfo] = useState(false);
-    const [selectedProduct, setSelectedProduct] = useState(null);
+
 
     const hideShowInfoModal = () => {
         setShowInfo(false);

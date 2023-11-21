@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 const MainLogo = () => {
     return (
+        <>
         <section className="untere-logo">
             <div className="untere-logo-text">
 
@@ -8,6 +11,8 @@ const MainLogo = () => {
                 ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cumque sed neque consequatur!</p>
             </div>
         </section>
+        <Link to="/about"><button>Absenden</button></Link>
+        </>
     )
 };
 

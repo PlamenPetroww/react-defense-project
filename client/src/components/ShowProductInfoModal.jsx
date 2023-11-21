@@ -9,7 +9,6 @@ const ShowProductInfoModal = ({
 
     const [product,  setProducts] = useState({});
     const [showDelete, setShowDelete] = useState(false);
-    const [selectedProduct, setSelectedProduct] = useState(null)
 
     
     useEffect(() => {
@@ -20,9 +19,8 @@ const ShowProductInfoModal = ({
 
     // Show delete modal after click at the delete button
 
-    const deleteProductClickHandler = (productId) => {
-        console.log(productId)
-        // setSelectedProduct(productId);
+    const deleteProductClickHandler = () => {
+        console.log('delete user ?')
         setShowDelete(true);
     };
 
@@ -46,8 +44,7 @@ const ShowProductInfoModal = ({
     }
 
     return(
-        <section className="ontainer overlay" >
-            <div className="backdrop" onClick={onClose}></div>
+        <section onClick={onClose} className="ontainer overlay" >
             <div className="anmelden__tok">
                 <h2 className="anmelden">Check the full Information</h2>
             </div>
@@ -60,6 +57,7 @@ const ShowProductInfoModal = ({
                 <p>${product.description}</p>
                 <p>${product.email}</p>
                 <button type="button" onClick={deleteProductClickHandler}>Delete</button>
+                <button type="button" onClick={onClose}>Cancel</button>
                 
                 {showDelete && (
                 <ProductDeleteModal

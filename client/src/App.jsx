@@ -1,22 +1,37 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Main from './components/Main';
 
+import Footer from './components/Footer';
+import Hauptmenu from './components/Hauptmenu';
+import Header from './components/Header';
+import Gallery from './components/Gallery';
+import About from './components/About';
+import Contacts from './components/Contacts';
+import Main from './components/Main';
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
 
   return (
-    <div>
+    <>
         
         <Header />
-        <main>
-            <Main />
-        </main>
-        
-        <Footer />
 
-  {/* DAS-SIND-WIR-MOBILE */}
-        <section className="leistungs__mobile">
+        <Hauptmenu />
+            <Routes>
+                {/* Tuk predi vmesto * imashe /, da ne e nqkakwa greshka ? <Route path="*" element={<Main />}/> */}
+                <Route path="*" element={<Main />}/>
+                <Route path="/gallery" element={<Gallery />}/>
+                <Route path="/about" element={<About />}/>
+                <Route path="/contacts" element={<Contacts />}/>
+            </Routes>
+        <Footer /> 
+  </>
+  )
+}
+
+export default App;
+
+{/* DAS-SIND-WIR-MOBILE */}
+        {/* <section className="leistungs__mobile">
             <div className="wrapper leistungs__article__mobile">
                 <div className="leistungs__image">
                 <img src="../public/img/grilled-burger.jpg" alt="" />
@@ -51,11 +66,4 @@ function App() {
                 </p>
                 <button className="button button--solid">Schaue mehr ..</button>
             </div>
-        </section>
-
-        
-  </div>
-  )
-}
-
-export default App;
+        </section> */}
