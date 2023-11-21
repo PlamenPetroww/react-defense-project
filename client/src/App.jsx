@@ -2,10 +2,9 @@
 import Footer from './components/Footer';
 import Hauptmenu from './components/Hauptmenu';
 import Header from './components/Header';
-import Gallery from './components/Gallery';
+import Gallery from './components/gallery/Gallery';
 import About from './components/About';
 import Create from './components/Create';
-// import CreateProduct from './components/CreateProduct';
 
 import Main from './components/Main';
 import {Routes, Route} from 'react-router-dom';

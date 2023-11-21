@@ -1,4 +1,17 @@
+import { useEffect, useState } from "react";
+
+import * as restaurantService from '../../services/restaurantService';
+
 const Gallery = () => {
+
+    const [restaurants, setRestaurants] = useState([]);
+
+    useEffect(() => {
+        restaurantService.getAll()
+            .then(result => setRestaurants(result));
+    }, []);
+
+    console.log(restaurants);
     return(
         <>
             <h2>Gallery</h2>
