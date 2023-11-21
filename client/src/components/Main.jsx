@@ -1,5 +1,5 @@
 import MainLogo from "./MainLogo";
-import MainRegister from "./Register";
+import MainRegister from "./user/register/Register";
 import SiteMainTitle from "./SiteMainTitle";
 import Welcome from "./Welcome";
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import * as restaurantService from '../../services/restaurantService';
+import GalleryRestaurantList from "./gallery-restaurant-list/galleryRestaurantList";
 
 const Gallery = () => {
 
@@ -15,8 +16,11 @@ const Gallery = () => {
     return(
         <>
             <h2>Gallery</h2>
+            {restaurants.map(restaurant => (
+                <GalleryRestaurantList key={restaurant._id} {...restaurant}/>
+            ))}
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, voluptatum voluptate. Repudiandae ipsum magnam quidem esse cum libero, rem ab, maxime est consequatur minima aliquam, nostrum necessitatibus eum aspernatur corporis.</p>
+            {restaurants.length === 0 && <h3>No Restaurants</h3>} 
         </>
     );
 };

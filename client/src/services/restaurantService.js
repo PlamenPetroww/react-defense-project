@@ -1,29 +1,18 @@
-import {request} from '../lib/request';
+import * as request from '../lib/request';
 
 const baseUrl = 'http://localhost:3030/jsonstore/restaurants';
 
 export const getAll = async () => {
-    const result = await request('GET', baseUrl);
+    const result = await request.get(baseUrl);
 
     return Object.values(result);
 };
 
 export const create = async (restaurantData) => {
-    const response = await fetch(baseUrl, {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body : JSON.stringify(restaurantData)
-    });
-
-    const result = await response.json();
+    const result = await request.post(baseUrl, restaurantData);
 
     return result;
-    
 };
-
-
 
 export const getOne = async (productId) => {
     const response = await fetch(`${baseUrl}/${productId}`);
@@ -34,12 +23,12 @@ export const getOne = async (productId) => {
 
 
 
-export const remove = async (productId) => {
-    const response = await fetch(`${baseUrl}/${productId}`, {
-        method: 'DELETE'
-    });
+// export const remove = async (productId) => {
+//     const response = await fetch(`${baseUrl}/${productId}`, {
+//         method: 'DELETE'
+//     });
 
-    const result = await response.json();
+//     const result = await response.json();
 
-    return result;
-}
+//     return result;
+// }
