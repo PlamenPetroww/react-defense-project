@@ -1,4 +1,4 @@
-const MainRegister = () => {
+const Login = () => {
     return (
         <section className="ontainer">
             <div className="anmelden__tok">
@@ -44,4 +44,4 @@ const MainRegister = () => {
     )
 };
 
-export default MainRegister;
+export default Login;

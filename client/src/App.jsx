@@ -4,7 +4,9 @@ import Hauptmenu from './components/Hauptmenu';
 import Header from './components/Header';
 import Gallery from './components/Gallery';
 import About from './components/About';
-import Contacts from './components/Contacts';
+import Create from './components/Create';
+// import CreateProduct from './components/CreateProduct';
+
 import Main from './components/Main';
 import {Routes, Route} from 'react-router-dom';
 
@@ -17,11 +19,10 @@ function App() {
 
         <Hauptmenu />
             <Routes>
-                {/* Tuk predi vmesto * imashe /, da ne e nqkakwa greshka ? <Route path="*" element={<Main />}/> */}
                 <Route path="*" element={<Main />}/>
                 <Route path="/gallery" element={<Gallery />}/>
+                <Route path="/create" element={<Create />}/>
                 <Route path="/about" element={<About />}/>
-                <Route path="/contacts" element={<Contacts />}/>
             </Routes>
         <Footer /> 
   </>

@@ -21,9 +21,9 @@ const Hauptmenu = () => {
                     </div>
                 </div>
                 </h1>
-                <Link to="/about" className="no-underline"><p>About Us</p></Link>
+                <Link to="/create" className="no-underline"><p>Create</p></Link>
                 <span>✶</span>
-                <Link to="/contacts" className="no-underline"><p>Contacts</p></Link>
+                <Link to="/about" className="no-underline"><p>About Us</p></Link>
             </div>
         </section>
     )

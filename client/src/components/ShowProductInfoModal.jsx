@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import * as productService from '../services/productService';
+import * as restaurantService from '../services/restaurantService';
 import ProductDeleteModal from "./ProductDeleteModal";
 
 const ShowProductInfoModal = ({
@@ -12,7 +12,7 @@ const ShowProductInfoModal = ({
 
     
     useEffect(() => {
-        productService.getOne(productId)
+        restaurantService.getOne(productId)
         .then(result =>  setProducts(result))
         .catch(error => console.log(error));
     }, [productId]);
@@ -33,7 +33,7 @@ const ShowProductInfoModal = ({
 //   // After click at the delete button and make request Delete
     const deleteProductHandler = async () => {
         // try {
-        //     await productService.remove(selectedProduct);
+        //     await restaurantService.remove(selectedProduct);
         //      setProducts((state => state.filter((product) => product._id !== selectedProduct)));
         // } catch (error) {
         //     console.log(error)
@@ -44,7 +44,7 @@ const ShowProductInfoModal = ({
     }
 
     return(
-        <section onClick={onClose} className="ontainer overlay" >
+        <section onClick={onClose} className="ontainer" >
             <div className="anmelden__tok">
                 <h2 className="anmelden">Check the full Information</h2>
             </div>

@@ -17,7 +17,13 @@ const Header = () => {
                 </a></li>
                 </ul>
                 </div>
-            <div className="wagen">🛒Nimm (2) produkte für 30,00 €
+            <div className="wagen">🛒Take (2) products for 30,00 €</div>
+            <div className="login">
+                <ul>
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Register</a></li>
+                    <li><a href="">Logout</a></li>
+                </ul>
             </div>
         </div>
     )
