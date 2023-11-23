@@ -13,7 +13,7 @@ const RestaurantDetails = () => {
     restaurantService.getOne(restaurantId)
         .then(setRestaurant);
     //dobre e tuk da si sloja oshte edin .then i posle .catch ako e greshno da navigira kum 404
-        commentService.getAll()
+        commentService.getAll(restaurantId)
             .then(setComments);
     }, [restaurantId]);
 
