@@ -28,13 +28,10 @@ const RestaurantDetails = () => {
             formData.get('username'),
             formData.get('comment')
             )
-            navigate(`/gallery/${_id}`);
+            setComments(state => [...state, newComment])
     } catch(error) {
         console.log(error)
     }
-
-    console.log(newComment);
-    
   }
 
   return (
@@ -63,8 +60,8 @@ const RestaurantDetails = () => {
         <div>
             <h2>Comments</h2>
             <ul>
-                {comments.map(({username, text}) => (
-                    <li>
+                {comments.map(({_id, username, text}) => (
+                    <li key={_id}>
                     <p>{username}: {text}</p>
                 </li>
                 ))}
@@ -82,6 +79,8 @@ const RestaurantDetails = () => {
                     <a href="#">Delete</a>
                 </div> */}
         <article className="create-comment">
+
+            {/* Zada se resetvat vsichki inputi sled natiskane na butona Add Comment trqbwa da izpolzvam kontrolirani formi - trqbwa da go poprawq */}
             <label>Add new comment:</label>
             <form onSubmit={addCommentHandler}>
                 <input type="text" name="username" placeholder="username" />
