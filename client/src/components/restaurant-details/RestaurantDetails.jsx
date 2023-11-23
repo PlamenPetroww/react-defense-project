@@ -5,13 +5,17 @@ import * as commentService from '../../services/commentService';
 
 const RestaurantDetails = () => {
   const [restaurant, setRestaurant] = useState({});
+  const [comments, setComments] = useState([]);
   const { restaurantId } = useParams();
   const navigate = useNavigate()
 
   useEffect(() => {
-    restaurantService.getOne(restaurantId).then(setRestaurant);
+    restaurantService.getOne(restaurantId)
+        .then(setRestaurant);
     //dobre e tuk da si sloja oshte edin .then i posle .catch ako e greshno da navigira kum 404
-  }, [restaurantId]);
+        commentService.getAll()
+            .then(setComments);
+    }, [restaurantId]);
 
   const addCommentHandler = async (e) => {
     e.preventDefault();
@@ -56,15 +60,21 @@ const RestaurantDetails = () => {
         <p>{restaurant.description}</p>
 
         {/* Restaurants Commentary */}
+        <div>
+            <h2>Comments</h2>
+            <ul>
+                {comments.map(({username, text}) => (
+                    <li>
+                    <p>{username}: {text}</p>
+                </li>
+                ))}
+                
+            </ul>
 
-        <h2>Comments</h2>
-        <ul>
-            <li>
-            <p>I rate this Restaurants with 4 stars, because ....</p>
-            </li>
-        </ul>
-        <p>No comments.</p>
-
+            {comments.length === 0} {
+                <p>No comments.</p>
+            }
+        </div>
         {/* Edit/Delete buttons (Only for creators) */}
 
         {/* <div>
