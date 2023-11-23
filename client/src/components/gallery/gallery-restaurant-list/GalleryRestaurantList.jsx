@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
+
 const GalleryRestaurantList = ({
+    _id,
     title,
-    category,
     stars,
     imageUrl
 
@@ -9,7 +11,6 @@ const GalleryRestaurantList = ({
         <>
         <h2>{title}</h2>
         <br />
-        <p>{category}</p>
         <br />
         <p>{stars}</p>
         <br />
@@ -18,6 +19,7 @@ const GalleryRestaurantList = ({
         <p></p>
         <br />
         <p></p>
+        <Link to={`/gallery/${_id}`}>Details</Link>
         </>
     );
 };

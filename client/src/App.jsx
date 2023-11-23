@@ -1,3 +1,4 @@
+import {Routes, Route} from 'react-router-dom';
 
 import Footer from './components/Footer';
 import Hauptmenu from './components/Hauptmenu';
@@ -5,9 +6,8 @@ import Header from './components/Header';
 import Gallery from './components/gallery/Gallery';
 import About from './components/About';
 import Create from './components/Create';
-
 import Main from './components/Main';
-import {Routes, Route} from 'react-router-dom';
+import RestaurantDetails from './components/restaurant-details/RestaurantDetails';
 
 function App() {
 
@@ -18,10 +18,11 @@ function App() {
 
         <Hauptmenu />
             <Routes>
-                <Route path="*" element={<Main />}/>
+                <Route path="/" element={<Main />}/>
                 <Route path="/gallery" element={<Gallery />}/>
                 <Route path="/create" element={<Create />}/>
                 <Route path="/about" element={<About />}/>
+                <Route path="/gallery/:restaurantId" element={<RestaurantDetails />} />
             </Routes>
         <Footer /> 
   </>

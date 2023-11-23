@@ -14,9 +14,8 @@ export const create = async (restaurantData) => {
     return result;
 };
 
-export const getOne = async (productId) => {
-    const response = await fetch(`${baseUrl}/${productId}`);
-    const result = await response.json();
+export const getOne = async (restaurantId) => {
+    const result = await request.get(`${baseUrl}/${restaurantId}`);
 
     return result;
 }
