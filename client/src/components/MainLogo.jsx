@@ -11,7 +11,6 @@ const MainLogo = () => {
                 ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cumque sed neque consequatur!</p>
             </div>
         </section>
-        <Link to="/about"><button>Absenden</button></Link>
         </>
     )
 };

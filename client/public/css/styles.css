@@ -399,6 +399,34 @@ p {
   text-align: center;
 }
 
+.section-site-main {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Цвят на фона */
+    color: #333; /* Цвят на текста */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+  background-color: #333; /* Цвят на фона на хедъра */
+  color: #fff; /* Цвят на текста в хедъра */
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff; /* Цвят на фона на секцията */
+  border-radius: 8px; /* Закръглени ръбове */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Сянка */
+}
+
+ol, ul {
+  padding-left: 20px;
+}
+
 /* --> NEUE-GERICHTE-PHOTO <-- */
 
 .wrapper {

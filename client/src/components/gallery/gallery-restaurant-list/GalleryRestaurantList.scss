@@ -1,0 +1,126 @@
+.gallery-cards {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+}
+
+.gallery-cards p {
+    padding-left: 24px;
+}
+
+.container-gallery {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(120, 141, 141);
+    flex-wrap: wrap;
+}
+
+.container-gallery .container-gallery-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 2em;
+    text-align: start;
+    overflow: hidden;
+}
+
+.container .gallery-title {
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+    font-family: "Raleway";
+    font-weight: bold;
+}
+
+.container-gallery .container-gallery-info {
+    color: #191d20;
+    font-weight: bold;
+}
+
+.container-gallery .container-gallery-img {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+/* Cube */
+
+.stage-cube-cont {
+    flex: 0 0 50%;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    padding-top: 13%;
+    margin-left: 10em;
+    right: 0;
+    /* overflow: hidden; */ // Ako e hidden se pokazva, trqbwa da go pomislq
+}
+
+.cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
+
+    div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #CCC;
+        background-color: #F6F8FA;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px 0px lightyellow;
+    }
+
+    .face1 {
+        transform: translateZ(100px);
+    }
+    .face2 {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+    .face3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+    .face4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face6 {
+        transform: rotateX(-90deg) translateZ(100px)
+    }
+}
+
+@keyframes spincube {
+    from,
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+        transform: rotateY(-90deg);
+    }
+    33% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+        transform: rotateY(-270deg) rotateZ(90deg);
+    }
+    83% {
+        transform: rotateY(90deg) rotateZ(90deg);
+    }
+}
