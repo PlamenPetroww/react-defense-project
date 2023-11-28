@@ -10,25 +10,36 @@ import Main from './components/Main';
 import RestaurantDetails from './components/restaurant-details/RestaurantDetails';
 import Register from './components/user/register/Register';
 import Login from './components/user/login/Login';
+import { useState } from 'react';
+import AuthContext from './contexts/authContext';
 
 function App() {
 
-  return (
-    <>
-        
-        <Header />
+    const [auth, setAuth] = useState({});
 
-        <Hauptmenu />
-            <Routes>
-                <Route path="/" element={<Main />}/>
-                <Route path="/gallery" element={<Gallery />}/>
-                <Route path="/create" element={<Create />}/>
-                <Route path="/about" element={<About />}/>
-                <Route path="/gallery/:restaurantId" element={<RestaurantDetails />} />
-                <Route path="/register" element={<Register />}/>
-                <Route path="/login" element={<Login />}/>
-            </Routes>
-        <Footer /> 
+    const loginSubmitHandler = (values) => {
+
+        console.log(values)
+    }
+
+  return (
+      <>
+        <AuthContext.Provider value={{loginSubmitHandler}}>
+        
+            <Header />
+
+            <Hauptmenu />
+                <Routes>
+                    <Route path="/" element={<Main />}/>
+                    <Route path="/gallery" element={<Gallery />}/>
+                    <Route path="/create" element={<Create />}/>
+                    <Route path="/about" element={<About />}/>
+                    <Route path="/gallery/:restaurantId" element={<RestaurantDetails />} />
+                    <Route path="/register" element={<Register />}/>
+                    <Route path="/login" element={<Login/>}/>
+                </Routes>
+            <Footer /> 
+        </AuthContext.Provider>
   </>
   )
 }
