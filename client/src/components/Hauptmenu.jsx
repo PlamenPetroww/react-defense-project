@@ -14,10 +14,10 @@ const Hauptmenu = () => {
                 <h1 className="logo">
                 <div className="logo-1">
                     <div className="bolded">
-                        BURGER HOUSE<span></span>
+                        Find Restaurant<span></span>
                     </div>
                     <div className="kl-logo">
-                        slow &amp; burger station
+                        take &amp; your magic
                     </div>
                 </div>
                 </h1>

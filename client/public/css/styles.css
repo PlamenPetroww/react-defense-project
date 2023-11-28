@@ -401,30 +401,30 @@ p {
 
 .section-site-main {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8; /* Цвят на фона */
-    color: #333; /* Цвят на текста */
+    background: linear-gradient(to bottom, #66ccff, #3366ff);
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 header {
-  background-color: #333; /* Цвят на фона на хедъра */
-  color: #fff; /* Цвят на текста в хедъра */
-  text-align: center;
-  padding: 20px;
+    background: linear-gradient(to right, #333, #666);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
 section {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff; /* Цвят на фона на секцията */
-  border-radius: 8px; /* Закръглени ръбове */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Сянка */
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 ol, ul {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 /* --> NEUE-GERICHTE-PHOTO <-- */
