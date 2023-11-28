@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import AuthContext from "../../contexts/authContext";
 
+import './header.css';
+
 const Header = () => {
 
     const {

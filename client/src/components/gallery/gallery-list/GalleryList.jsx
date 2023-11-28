@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import './gallery.css';
+import './galleryList.css';
 
-import * as restaurantService from '../../services/restaurantService';
-import GalleryRestaurantList from "./gallery-restaurant-list/galleryRestaurantList";
+import * as restaurantService from '../../../services/restaurantService';
+import GalleryRestaurantList from "../gallery-restaurant-list/gallery-list/GalleryRestaurantList";
 
 const Gallery = () => {
 

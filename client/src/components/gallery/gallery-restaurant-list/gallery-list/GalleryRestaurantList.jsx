@@ -9,7 +9,7 @@ import {faBirthdayCake,
         faUtensils,
         faStar
         } from '@fortawesome/free-solid-svg-icons';
-import formatIsoDateToHumanReadable from '../../../utils/isoData';
+import formatIsoDateToHumanReadable from '../../../../utils/isoData';
 
 const GalleryRestaurantList = ({
     _id,

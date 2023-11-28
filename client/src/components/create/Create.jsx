@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
-import * as restaurantService from '../services/restaurantService';
+import * as restaurantService from '../../services/restaurantService';
 
+import './create.css';
 const Create = ({
     onClose,
     onProductCreate

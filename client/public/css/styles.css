@@ -57,157 +57,7 @@ p {
   font-size: 14px;
 }
 
-/* --> NAVIGATIONS-LEISTE <-- */
 
-.wrapper__nav {
-  display: flex;
-  width: 80%;
-  max-width: 1170px;
-  justify-content: space-between;
-  margin: 0 auto;
-  background-color: #191d20;
-  height: 32px;
-  flex-direction: reverse;
-}
-
-.wrapper__nav .wrapper-media {
-  display: flex;
-  max-width: 1170px;
-  background-color: #191d20;
-}
-
-.wrapper__nav .wrapper-media-sl {
-  width: 40px;
-  height: 40px;
-  margin-left: 1px;
-}
-
-.wrapper__nav ul {
-  display: flex;
-  margin: 0;
-}
-
-.wrapper__nav li {
-  display: block;
-  padding-left: 1em;
-}
-
-.wrapper__nav li .icons {
-  color: white;
-}
-
-.wrapper__nav .wagen {
-  min-width: 225px;
-  color: #F6F8FA;
-  cursor: pointer;
-  font-family: "Raleway";
-  font-weight: regular;
-  display: flex;
-  align-items: center;
-}
-
-.wrapper__nav .login li {
-  padding-top: 5px;
-}
-
-.wrapper__nav .login ul {
-  padding-left: 0;
-  padding-right: 40px;
-}
-
-.wrapper__nav .login a {
-  text-decoration: none;
-  color: #F6F8FA;
-}
-
-.wrapper__nav .wrapper-richtung span {
-  text-decoration: none;
-}
-
-/* --> ABOUT-US <-- */
-
-.hauptmenu {
-  display: flex;
-  width: 80%;
-  height: 50px;
-  background-color: #F6F8FA;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
-}
-
-.hauptmenu>* {
-  flex-grow: 10;
-  text-align: center;
-}
-
-.hauptmenu>span {
-  padding-top: 13px;
-}
-
-.logo {
-  width: 200px;
-  height: 105px;
-  background-color: #F6F8FA;
-  border-radius: 0 0 60% 60%/0 0 15% 15%;
-  padding-top: 20px;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 2px 2px 20px #666966;
-  position: relative;
-  font-size: 2em;
-}
-
-.logo-1 {
-  height: 78px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  animation: logo-spin infinite 20s linear;
-  will-change: filter;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-  transition: filter 500ms ease-in-out;
-}
-
-.hauptmenu .logo-1 div {
-  font-size: 0.7em;
-  font-weight: normal;
-  color: black;
-  width: 300px;
-  padding-top: 0.3em;
-}
-
-.hauptmenu .logo-1 .bolded {
-  font-weight: bold;
-}
-
-.hauptmenu .logo-1 div span {
-  width: 7ch;
-  height: 2px;
-  background-color: red;
-  display: block;
-  margin: 0.5em auto;
-}
-
-.hauptmenu .logo-1 .kl-logo {
-  font-size: 12px;
-}
-
-.kl-logo {
-  padding-bottom: 10px;
-  font-size: 13px;
-}
-
-.hauptmenu .no-underline {
-  text-decoration: none;
-}
 
 /* --> UNSERE-BURGER <-- */
 
@@ -385,49 +235,9 @@ p {
 
 /* --> NEW-PRODUKTE <-- */
 
-.new-produkt {
-  width: 100%;
-  text-align: center;
-}
 
-.new-produkt-title {
-  margin: 0;
-  padding-top: 1em;
-}
 
-.new-produkt .new-produkt-p-center {
-  text-align: center;
-}
 
-.section-site-main,
-.section-site-main-thousand {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #66ccff, #3366ff);
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section-site-main h2 {
-  text-align: center;
-  padding-top: 1em;
-}
-
-.section-site-main p {
-    padding: 0 4em 2em;
-    text-align: center;
-}
-
-.title-how-to-use h2 {
-    text-align: center;
-}
-
-.section-site-main-thousand {
-    text-align: center;
-    padding: 1em;
-}
 
 header {
     background: linear-gradient(to right, #333, #666);
@@ -451,115 +261,7 @@ ol, ul {
 
 /* --> NEUE-GERICHTE-PHOTO <-- */
 
-.wrapper {
-  background-color: #ffffff;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
-.wrapper .wrapper_box {
-  position: relative;
-  width: 320px;
-  height: auto;
-  border: 2px solid red;
-  margin-top: 30px;
-}
-
-.wrapper .img__klein {
-  width: 100%;
-  height: 200px;
-}
-
-.wrapper .wrapper_box .title_justify {
-  margin: 0;
-  padding: 30px;
-  text-align: justify;
-  font-family: "Raleway";
-  font-weight: bold;
-}
-
-.wrapper .wrapper_box .title_italic {
-  margin: 0;
-  padding-left: 30px;
-  font-style: italic;
-  font-size: 12px;
-}
-
-.wrapper .wrapper_box .p_justify {
-  margin: 0;
-  padding: 30px 30px 0 30px;
-}
-
-.wrapper .wrapper_box_color {
-  background-color: #191d20;
-  color: #ffffff;
-  position: relative;
-  width: 320px;
-  height: auto;
-  margin-top: 30px;
-}
-
-.wrapper .wrapper_box_color .title_justify {
-  margin: 0;
-  padding: 30px;
-  text-align: justify;
-  font-family: "Raleway";
-  font-weight: bold;
-}
-
-.wrapper .wrapper_box_color .title_italic {
-  margin: 0;
-  padding-left: 30px;
-  font-style: italic;
-  font-size: 12px;
-}
-
-.wrapper .wrapper_box_color .p_justify {
-  margin: 0;
-  padding: 30px 30px 0 30px;
-  color: #ffffff;
-}
-
-.wrapper .wrapper_box .email {
-  margin-bottom: 3em;
-  font-weight: bold;
-}
-
-.wrapper_box_button {
-  width: 200px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #191d20;
-  color: #ffffff;
-  border: none;
-  font-family: 'Raleway';
-  font-weight: bold;
-  cursor: pointer;
-  position: absolute;
-  bottom: -25px;
-  left: 58px;
-}
-
-.wrapper_box_button .btn-new {
-  width: 200px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #191d20;
-  color: #ffffff;
-  border: none;
-  font-family: 'Raleway';
-  font-weight: bold;
-  cursor: pointer;
-  bottom: -25px;
-  left: 58px;
-}
-
-.btn-new {
-  margin-top: 7em;
-}
 
 /* --> GÄSTE-ZUFRIEDENHEIT <--  */
 
@@ -726,7 +428,7 @@ ol, ul {
   margin-top: 1em;
 }
 
-.ontainer {
+/* .ontainer {
   width: 100%;
   height: 700px;
   background-color:#333739;
@@ -766,7 +468,7 @@ ol, ul {
   margin-right: auto;
   margin-bottom: 2em;
   width: 50%;
-}
+} */
 
 /* --> BESTELL-FORMULAR MOBILE<-- */
 
@@ -776,65 +478,7 @@ ol, ul {
 
 /* --> UNTERE-LOGO <-- */
 
-.untere-logo {
-  display: flex;
-  width: 100%;
-  background-color: #00aced;
-  justify-content: center;
-  font-size: .8rem;
-  color: #FFFFFF;
-}
 
-.untere-logo .untere-logo-text {
-  width: 60%;
-  line-height: 170%;
-  display: flex;
-}
-
-.untere-logo img {
-  width: 40px;
-  height: 35px;
-}
-
-.untere-logo p {
-  text-align: center;
-  color: #FFFFFF;
-  text-align: justify;
-}
-
-/* --> FOOTER <-- */
-
-.footer {
-  color: grey;
-  display: flex;
-  width: 100%;
-  height: auto;
-  background-color: #F6F8FA;
-  font-family: "Padauk";
-  font-size: .8rem;
-}
-
-.footer .footer__menu {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  justify-content: space-evenly;
-  flex: 1 1 70%;
-}
-
-.footer .title-P {
-  display: flex;
-  color: #333739;
-  flex: 1 1 30%;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer .footer__menu>a {
-  flex-grow: 1;
-  text-decoration: none;
-  color: grey;
-}
 
 
 /* --> MEDIA-QUERRY <-- */

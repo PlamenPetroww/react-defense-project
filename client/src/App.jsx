@@ -5,36 +5,50 @@ import * as authService from './services/authService';
 import AuthContext from './contexts/authContext';
 import Path from './paths';
 
-import Footer from './components/Footer';
-import Hauptmenu from './components/Hauptmenu';
+import Footer from './components/footer/Footer';
+import Hauptmenu from './components/hauptmenu/Hauptmenu';
 import Header from './components/header/Header';
-import Gallery from './components/gallery/Gallery';
-import About from './components/About';
-import Create from './components/Create';
-import Main from './components/Main';
+import GalleryList from './components/gallery/gallery-list/GalleryList';
+import About from './components/about/About';
+import Create from './components/create/Create';
+import Main from './components/main/Main';
 import RestaurantDetails from './components/restaurant-details/RestaurantDetails';
 import Register from './components/user/register/Register';
 import Login from './components/user/login/Login';
+import Logout from './components/user/logout/logout';
 
 function App() {
     const navigate = useNavigate();
 
-    const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useState(() => {
+        localStorage.removeItem('accessToken');
+
+        return {};
+    });
 
     const loginSubmitHandler = async (values) => {
         // I tuk shte mi trqbwa da imam try catch
         const result = await authService.login(values.email, values.password);
         
-        setAuth(result)
+        setAuth(result);
+        localStorage.setItem('accessToken', result.accessToken);
 
-        navigate(Path.Home)
+        navigate(Path.Home);
     };
 
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.email, values.password)
+        
         setAuth(result)
 
+        localStorage.setItem('accessToken', result.accessToken);
+    
         navigate(Path.Home)
+    }
+
+    const logoutHandler = () => {
+        setAuth({});
+        localStorage.removeItem('accessToken');
     }
 
     //Trqbwa da si sloja nqkaude i valudaciq dali confirm password otgovarq na password
@@ -42,9 +56,10 @@ function App() {
     const values = {
         loginSubmitHandler,
         registerSubmitHandler,
+        logoutHandler,
         username: auth.username || auth.email,
         email: auth.email,
-        isAuthenticated: !!auth.email,
+        isAuthenticated: !!auth.accessToken,
     }
 
   return (
@@ -56,12 +71,13 @@ function App() {
             <Hauptmenu />
                 <Routes>
                     <Route path={Path.Home} element={<Main />}/>
-                    <Route path="/gallery" element={<Gallery />}/>
+                    <Route path="/gallery" element={<GalleryList />}/>
                     <Route path="/create" element={<Create />}/>
                     <Route path="/about" element={<About />}/>
                     <Route path="/gallery/:restaurantId" element={<RestaurantDetails />} />
                     <Route path="/register" element={<Register />}/>
                     <Route path="/login" element={<Login/>}/>
+                    <Route path={Path.Logout} element={<Logout/>}/>
                 </Routes>
             <Footer /> 
         </AuthContext.Provider>

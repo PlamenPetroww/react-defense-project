@@ -1,0 +1,25 @@
+.untere-logo {
+  display: flex;
+  width: 100%;
+  background-color: #00aced;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+.untere-logo .untere-logo-text {
+  width: 60%;
+  line-height: 170%;
+  display: flex;
+}
+
+.untere-logo img {
+  width: 40px;
+  height: 35px;
+}
+
+.untere-logo p {
+  text-align: center;
+  color: #ffffff;
+  text-align: justify;
+}

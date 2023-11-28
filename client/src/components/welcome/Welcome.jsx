@@ -1,3 +1,5 @@
+import './welcome.css';
+
 const Welcome = () => {
     return (
         <section className="wrapper">

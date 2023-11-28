@@ -1,0 +1,82 @@
+.hauptmenu {
+  display: flex;
+  width: 80%;
+  height: 50px;
+  background-color: #f6f8fa;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.hauptmenu > * {
+  flex-grow: 10;
+  text-align: center;
+}
+
+.hauptmenu > span {
+  padding-top: 13px;
+}
+
+.logo {
+  width: 200px;
+  height: 105px;
+  background-color: #f6f8fa;
+  border-radius: 0 0 60% 60%/0 0 15% 15%;
+  padding-top: 20px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px 20px #666966;
+  position: relative;
+  font-size: 2em;
+}
+
+.logo-1 {
+  height: 78px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: logo-spin infinite 20s linear;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transition: filter 500ms ease-in-out;
+}
+
+.hauptmenu .logo-1 div {
+  font-size: 0.7em;
+  font-weight: normal;
+  color: black;
+  width: 300px;
+  padding-top: 0.3em;
+}
+
+.hauptmenu .logo-1 .bolded {
+  font-weight: bold;
+}
+
+.hauptmenu .logo-1 div span {
+  width: 7ch;
+  height: 2px;
+  background-color: red;
+  display: block;
+  margin: 0.5em auto;
+}
+
+.hauptmenu .logo-1 .kl-logo {
+  font-size: 12px;
+}
+
+.kl-logo {
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+
+.hauptmenu .no-underline {
+  text-decoration: none;
+}

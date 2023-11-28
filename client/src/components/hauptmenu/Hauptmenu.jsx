@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-       
+import './hauptmenu.css';
 const Hauptmenu = () => {
             
     return (

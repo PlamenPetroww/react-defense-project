@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import './main-logo.css';
 
 const MainLogo = () => {
     return (

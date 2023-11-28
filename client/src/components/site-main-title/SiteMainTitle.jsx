@@ -1,3 +1,5 @@
+import './site-main-title.css';
+
 const SiteMainTitle = () => {
     return (
         <article>

@@ -1,0 +1,43 @@
+.section-site-main,
+.section-site-main-thousand {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #66ccff, #3366ff);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-site-main h2 {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.section-site-main p {
+  padding: 0 4em 2em;
+  text-align: center;
+}
+
+.title-how-to-use h2 {
+  text-align: center;
+}
+
+.section-site-main-thousand {
+  text-align: center;
+  padding: 1em;
+}
+
+.new-produkt {
+  width: 100%;
+  text-align: center;
+}
+
+.new-produkt-title {
+  margin: 0;
+  padding-top: 1em;
+}
+
+.new-produkt .new-produkt-p-center {
+  text-align: center;
+}

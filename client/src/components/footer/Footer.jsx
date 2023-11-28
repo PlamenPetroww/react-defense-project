@@ -1,8 +1,10 @@
+import './footer.css';
+
 const Footer = () => {
     return (
         <section>
             <div className="footer">
-                <p className="title-P">Made by Petrov Plamen 2022</p>
+                <p className="title-P">Made by Petrov Plamen 2023</p>
                 <article className="footer__menu">
                 <a href="#">Home</a>
                 <a href="#">Über uns</a>
