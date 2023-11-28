@@ -30,15 +30,27 @@ function App() {
         navigate(Path.Home)
     };
 
+    const registerSubmitHandler = async (values) => {
+        console.log(values)
+    }
+
+    const values = {
+        loginSubmitHandler,
+        registerSubmitHandler,
+        username: auth.username,
+        email: auth.email,
+        isAuthenticated: !!auth.username,
+    }
+
   return (
       <>
-        <AuthContext.Provider value={{loginSubmitHandler}}>
+        <AuthContext.Provider value={values}>
         
             <Header />
 
             <Hauptmenu />
                 <Routes>
-                    <Route path="/" element={<Main />}/>
+                    <Route path={Path.Home} element={<Main />}/>
                     <Route path="/gallery" element={<Gallery />}/>
                     <Route path="/create" element={<Create />}/>
                     <Route path="/about" element={<About />}/>

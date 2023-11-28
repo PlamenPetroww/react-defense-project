@@ -33,7 +33,7 @@ const Login = () => {
                     value={values[LoginFormKeys.Email]}
                     />
                     <div>
-                    <label htmlFor="nachname" className="screenreader">Password:</label>
+                    <label htmlFor="password" className="screenreader">Password:</label>
                     <input id="login-password"
                     type="password"
                     name={LoginFormKeys.Password}
@@ -47,7 +47,7 @@ const Login = () => {
                     <button
                     className="button button--red--absenden"
                     type="submit"
-                    name="absendenbutton">Registration!</button>
+                    name="absendenbutton">Login!</button>
                     </div>
                 </form>
             </div>
