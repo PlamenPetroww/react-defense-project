@@ -6,7 +6,7 @@ const Login = () => {
         email: '',
         password: '',
     });
-    
+
     return (
         <section className="ontainer">
             <div className="anmelden__tok">
@@ -15,7 +15,7 @@ const Login = () => {
             <div className="formular">
                 <form id="kontakt-formular" onSubmit={onSubmit}>
                     <div className="kontakt-formular-center">
-                    <label htmlFor="email" className="screenreader" />
+                    <label htmlFor="email" className="screenreader">Email:</label>
                     <input
                     id="email" 
                     type="email" 
@@ -25,7 +25,7 @@ const Login = () => {
                     value={values.email}
                     />
                     <div>
-                    <label htmlFor="nachname" className="screenreader" />
+                    <label htmlFor="nachname" className="screenreader">Password:</label>
                     <input id="login-password"
                     type="password"
                     name="password"
