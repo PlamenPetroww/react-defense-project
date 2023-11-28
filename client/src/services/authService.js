@@ -10,3 +10,8 @@ export const login = async (email, password) => {
     //TUk e dobre da si napravq try catch i da iskaram nqkakav notification
     return result;
 }
+
+export const register = (email, password) => request.post(`${baseUrl}/register`, {
+        email,
+        password,
+});

@@ -31,15 +31,20 @@ function App() {
     };
 
     const registerSubmitHandler = async (values) => {
-        console.log(values)
+        const result = await authService.register(values.email, values.password)
+        setAuth(result)
+
+        navigate(Path.Home)
     }
+
+    //Trqbwa da si sloja nqkaude i valudaciq dali confirm password otgovarq na password
 
     const values = {
         loginSubmitHandler,
         registerSubmitHandler,
-        username: auth.username,
+        username: auth.username || auth.email,
         email: auth.email,
-        isAuthenticated: !!auth.username,
+        isAuthenticated: !!auth.email,
     }
 
   return (
