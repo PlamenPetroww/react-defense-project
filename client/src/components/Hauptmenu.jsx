@@ -17,7 +17,7 @@ const Hauptmenu = () => {
                         Find Restaurant<span></span>
                     </div>
                     <div className="kl-logo">
-                        take &amp; your magic
+                        take &amp; live your magic
                     </div>
                 </div>
                 </h1>

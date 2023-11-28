@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <div className="wrapper__nav">
@@ -20,8 +22,8 @@ const Header = () => {
             <div className="wagen">🛒Take (2) products for 30,00 €</div>
             <div className="login">
                 <ul>
-                    <li><a href="">Login</a></li>
-                    <li><a href="">Register</a></li>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/register">Register</Link></li>
                     <li><a href="">Logout</a></li>
                 </ul>
             </div>

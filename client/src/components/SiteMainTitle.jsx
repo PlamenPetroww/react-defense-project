@@ -11,7 +11,7 @@ const SiteMainTitle = () => {
                     detailed information and real reviews to help you choose the perfect spot for your next gourmet adventure.</p>
             </section>
 
-            <section>
+            <section className="title-how-to-use">
                 <h2>How to Use Our Site?</h2>
                 <ol>
                     <li>
@@ -34,7 +34,7 @@ const SiteMainTitle = () => {
             </section>
 
             <section>
-                <h2>Why Thousands Choose Us?</h2>
+                <h2 className="section-site-main-thousand">Why Thousands Choose Us?</h2>
                 <ul>
                     <li><strong>Real Reviews:</strong> Our user community provides authentic reviews and experiences.</li>
                     <li><strong>Easy Search:</strong> Filter restaurants according to your preferences.</li>
@@ -42,23 +42,21 @@ const SiteMainTitle = () => {
                 </ul>
             </section>
             <div className="new-produkt">
-                <h2 className="new-produkt-title">These are the latest<span className="text-xs"> news from us!</span>
-                </h2>
-                <p className="new-produkt-p-center"><section id="latest-news">
+                <h2 className="new-produkt-title">These are the latest<span className="text-xs"> news from us!</span></h2>
+                <section id="latest-news">
 
-            <article>
-                <h3>New Collection of Dishes</h3>
-                <p>Our head chef has unveiled a new collection of exquisite dishes, promising unique flavors and culinary delight.</p>
-                <p class="date">Published on: November 27, 2023</p>
-            </article>
+                <article>
+                    <h3>New Collection of Dishes</h3>
+                    <p>Our head chef has unveiled a new collection of exquisite dishes, promising unique flavors and culinary delight.</p>
+                    <p className="date">Published on: November 27, 2023</p>
+                </article>
 
-            <article>
-                <h3>Special December Promotion</h3>
-                <p>Throughout December, book a table through our website and enjoy a 15% discount on all menus.</p>
-                <p class="date">Published on: November 22, 2023</p>
-            </article>
-            </section>
-            </p>
+                <article>
+                    <h3>Special December Promotion</h3>
+                    <p>Throughout December, book a table through our website and enjoy a 15% discount on all menus.</p>
+                    <p className="date">Published on: November 22, 2023</p>
+                </article>
+                </section>
 
             </div>
         </article>

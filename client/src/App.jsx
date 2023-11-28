@@ -2,12 +2,14 @@ import {Routes, Route} from 'react-router-dom';
 
 import Footer from './components/Footer';
 import Hauptmenu from './components/Hauptmenu';
-import Header from './components/Header';
+import Header from './components/header/Header';
 import Gallery from './components/gallery/Gallery';
 import About from './components/About';
 import Create from './components/Create';
 import Main from './components/Main';
 import RestaurantDetails from './components/restaurant-details/RestaurantDetails';
+import Register from './components/user/register/Register';
+import Login from './components/user/login/Login';
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
                 <Route path="/create" element={<Create />}/>
                 <Route path="/about" element={<About />}/>
                 <Route path="/gallery/:restaurantId" element={<RestaurantDetails />} />
+                <Route path="/register" element={<Register />}/>
+                <Route path="/login" element={<Login />}/>
             </Routes>
         <Footer /> 
   </>
