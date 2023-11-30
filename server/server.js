@@ -1339,59 +1339,42 @@
     	}
     };
     var seedData = {
-    	recipes: {
-    		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Easy Lasagna",
-    			img: "assets/lasagna.jpg",
-    			ingredients: [
-    				"1 tbsp Ingredient 1",
-    				"2 cups Ingredient 2",
-    				"500 g  Ingredient 3",
-    				"25 g Ingredient 4"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551279012
-    		},
-    		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Grilled Duck Fillet",
-    			img: "assets/roast.jpg",
-    			ingredients: [
-    				"500 g  Ingredient 1",
-    				"3 tbsp Ingredient 2",
-    				"2 cups Ingredient 3"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551344360
-    		},
-    		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Roast Trout",
-    			img: "assets/fish.jpg",
-    			ingredients: [
-    				"4 cups Ingredient 1",
-    				"1 tbsp Ingredient 2",
-    				"1 tbsp Ingredient 3",
-    				"750 g  Ingredient 4",
-    				"25 g Ingredient 5"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551388703
-    		}
-    	},
+    	restaurants: {
+            "07f260f4-466c-4607-9a33-f7273b24f1b4": {
+              "_id": "07f260f4-466c-4607-9a33-f7273b24f1b4",
+              "title": "La Tour d’Argent",
+              "chef" : "Plamen Petrov",
+              "category": "French Restaurant",
+              "stars": "5",
+              "city": "Paris",
+              "email": "asen@gmail.com",
+              "imageUrl": "https://media.timeout.com/images/105387012/750/562/image.jpg",
+              "description": "So you’re in Paris en couple. How original. There can be a lot of pressure to make an evening out in the City of Love especially romantic – and finding the perfect restaurant is particularly difficult in a city also famed for its cuisine. But don’t stress. We’ve tried and tested thousands of restaurants in our time, and also have a pretty good idea of what makes the ideal date spot. The two go hand in hand – duh. So from cosy casual spots to fine-dining blowouts, here’s our guide to the most romantic restaurants in Paris."
+            },
+            "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
+              "_id": "bdabf5e9-23be-40a1-9f14-9117b6702a9d",
+              "title": "Høst",
+              "chef" : "Plamen Petrov",
+              "category": "Gourmet",
+              "stars": "3",
+              "city": "Kopenhagen",
+              "email": "anotheruser@example.com",
+              "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWreYat7xNotM9kQIdqigFsdgQf3mm8rtGSg&usqp=CAU",
+              "description": "Gutes Essen zu fairen Preisen? Das gibt es auch in Kopenhagen. Das beste Beispiel dafür ist das Restaurant Høst in der Nørre Farimagsgade, im Zentrum der Stadt. Das Lokal gehört neben zehn weiteren Restaurants zum Copenhagen Food Collective, das sich zum Ziel gesetzt hat, hochwertige Küche in Wohlfühlambiente anzubieten – und zwar mit richtig gutem Preis-Leistungs-Verhältnis."
+            },
+            "7b3143e1-d6df-4e67-bd7e-5f8b03f2fd3f": {
+              "_id": "7b3143e1-d6df-4e67-bd7e-5f8b03f2fd3f",
+              "title": "Rustical Pizza",
+              "chef" : "Plamen Petrov",
+              "category": "Italian Restaurant",
+              "stars": "1",
+              "city": "Rome",
+              "email": "johndoe@example.com",
+              "imageUrl": "https://www.finedininglovers.com/sites/g/files/xknfdk626/files/styles/im_landscape_100/public/Original_16361_Mirabelle-restaurant-TP.jpg.webp?itok=N1Sa6rr3",
+              "description": "You can't put a price on a good pizza with a view of the Colosseum. Or can you? The Ristoro della Salute is the perfect place for a drink or an authentic pizza (13 Euros).Since 2009, celebrity chef Fulvio Pierangelini has been managing the Food&Beverage offering of the 11 luxury hotels making up the Rocco Forte Group. The group's pièce de résistance is its Roman establishment Le Jardin De Russie, located in the Secret Garden of the 5-star hotel of Via del Babuino next to Piazza di Spagna. Without exceeding your budget, you can order one of the little signature focaccia breads such as the version with asparagus, black truffle and cheese (22 Euros) or a dessert like the lemon and basil meringue pie with caramelized cherries (18 Euros), accompanied with a glass of Sauvignon."
+        
+            }
+          },
     	comments: {
     		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

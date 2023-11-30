@@ -1,23 +1,34 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useContext, useEffect, useReducer, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import * as restaurantService from "../../services/restaurantService";
 import * as commentService from '../../services/commentService';
+
 import './RestaurantDetails.css';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import AuthContext from '../../contexts/authContext';
+
+import reducer  from './commentReducer';
 
 const RestaurantDetails = () => {
-  const [restaurant, setRestaurant] = useState({});
-  const [comments, setComments] = useState([]);
-  const { restaurantId } = useParams();
-  const navigate = useNavigate()
+    const {email, userId} = useContext(AuthContext)
+    const [restaurant, setRestaurant] = useState({});
+    const [comments, dispatch] = useReducer(reducer, [])
+    const { restaurantId } = useParams();
 
   useEffect(() => {
     restaurantService.getOne(restaurantId)
         .then(setRestaurant);
     //dobre e tuk da si sloja oshte edin .then i posle .catch ako e greshno da navigira kum 404
         commentService.getAll(restaurantId)
-            .then(setComments);
+            .then(result => {
+                dispatch({
+                    type: 'GET_ALL_COMMENTS',
+                    payload: result,
+                })
+            });
     }, [restaurantId]);
 
   const addCommentHandler = async (e) => {
@@ -28,16 +39,23 @@ const RestaurantDetails = () => {
     try {
         const newComment = await commentService.create(
             restaurantId,
-            formData.get('username'),
             formData.get('comment')
-            )
-            setComments(state => [...state, newComment])
+            );
+            newComment.owner = {email};
+            dispatch({
+                type: 'ADD_COMMENT',
+                payload: newComment
+            })
     } catch(error) {
         console.log(error)
     }
   }
 
     const starsArray = Array.from({ length: parseInt(restaurant.stars, 10) });
+
+    // const {values, onChange, onSubmit} = useForm(addCommentHandler, {
+    //     comment: '',
+    // })
 
   return (
 
@@ -54,9 +72,7 @@ const RestaurantDetails = () => {
                 <FontAwesomeIcon key={index} icon={faStar} color="#FFFF00" />
             ))}
             </p>
-                <p>Your Contact: {restaurant.email}</p>
-                <p>Createt At: {restaurant.createdAt}</p>
-                <p>Updated At: {restaurant.updatedAt}</p>
+                <p>For contact:  {restaurant.email}</p>
                 <p>Restaurant description: <br /> {restaurant.description}</p>
             </div>
             <div className="image-details">
@@ -70,9 +86,9 @@ const RestaurantDetails = () => {
             <div>
                 <h2>Comments</h2>
                 <ul>
-                    {comments.map(({_id, username, text}) => (
+                    {comments.map(({_id, text, owner: {email}}) => (
                         <li key={_id}>
-                        <p>{username}: {text}</p>
+                        <p>{email}: {text}</p>
                     </li>
                     ))}
                     
@@ -82,18 +98,18 @@ const RestaurantDetails = () => {
                     <p>No comments.</p>
                 }
             </div>
-            {/* Edit/Delete buttons (Only for creators) */}
 
-            {/* <div>
-                        <a href="#">Edit</a>
-                        <a href="#">Delete</a>
-                    </div> */}
+            {userId === restaurant._ownerId && (
+            <div>
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+            )}
             <article className="create-comment">
 
                 {/* Zada se resetvat vsichki inputi sled natiskane na butona Add Comment trqbwa da izpolzvam kontrolirani formi - trqbwa da go poprawq */}
                 <label>Add new comment:</label>
                 <form onSubmit={addCommentHandler}>
-                    <input type="text" name="username" placeholder="username" />
                     <textarea name="comment" placeholder="Comment..."></textarea>
                 <input type="submit" value="Add Comment" />
                 </form>

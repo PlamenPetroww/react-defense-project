@@ -1,8 +1,6 @@
 import {Routes, Route, useNavigate} from 'react-router-dom';
-import { useState } from 'react';
 
-import * as authService from './services/authService';
-import AuthContext from './contexts/authContext';
+import {AuthProvider} from './contexts/authContext';
 import Path from './paths';
 
 import Footer from './components/footer/Footer';
@@ -19,54 +17,11 @@ import Logout from './components/user/logout/logout';
 import NotFound from './components/Not-Found/Not-Found';
 
 function App() {
-    const navigate = useNavigate();
-
-    const [auth, setAuth] = useState(() => {
-        localStorage.removeItem('accessToken');
-
-        return {};
-    });
-
-    const loginSubmitHandler = async (values) => {
-        // I tuk shte mi trqbwa da imam try catch
-        const result = await authService.login(values.email, values.password);
-        
-        setAuth(result);
-        
-        localStorage.setItem('accessToken', result.accessToken);
-
-        navigate(Path.Home);
-    };
-
-    const registerSubmitHandler = async (values) => {
-        const result = await authService.register(values.email, values.password)
-        
-        setAuth(result)
-
-        localStorage.setItem('accessToken', result.accessToken);
     
-        navigate(Path.Home)
-    }
-
-    const logoutHandler = () => {
-        setAuth({});
-        localStorage.removeItem('accessToken');
-    }
-
-    //Trqbwa da si sloja nqkaude i valudaciq dali confirm password otgovarq na password
-
-    const values = {
-        loginSubmitHandler,
-        registerSubmitHandler,
-        logoutHandler,
-        username: auth.username || auth.email,
-        email: auth.email,
-        isAuthenticated: !!auth.accessToken,
-    }
 
   return (
       <>
-        <AuthContext.Provider value={values}>
+        <AuthProvider>
         
             <Header />
 
@@ -83,7 +38,7 @@ function App() {
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             <Footer /> 
-        </AuthContext.Provider>
+        </AuthProvider>
   </>
   )
 }

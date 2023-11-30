@@ -4,6 +4,7 @@ import AuthContext from "../../../contexts/authContext";
 import useForm from "../../../hooks/useForm";
 
 import './register.css';
+import { Link } from "react-router-dom";
 
 const Register = () => {
 

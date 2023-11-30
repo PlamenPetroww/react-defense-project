@@ -11,6 +11,7 @@ const Header = () => {
         isAuthenticated,
         username
     } = useContext(AuthContext);
+
     return (
         <div className="wrapper__nav">
             <div className="wrapper-media">
@@ -29,12 +30,10 @@ const Header = () => {
                 </a></li>
                 </ul>
                 </div>
-            <div className="wagen">🛒Take (2) products for 30,00 €</div>
             {isAuthenticated && (
             <div className="login">
                 <ul>
-                    {/* Tuk trqbwa da e Link, a ne a */}
-                    <li><a href="">Logout</a></li>
+                    <li><Link to="/logout">Logout</Link></li>
                 </ul>
                 <span>Logged as: {username}</span>
             </div>

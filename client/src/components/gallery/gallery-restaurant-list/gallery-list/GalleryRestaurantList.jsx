@@ -27,7 +27,7 @@ const GalleryRestaurantList = ({
                 <div className='card'>
                     <section>
                         <h2 className="gallery-title title_justify">{title}</h2>
-                        <img className="container-gallery-img" src={imageUrl} alt="" />
+                        <img className="container-gallery-img" src={imageUrl} alt="imageUrl" />
                         <p className='title_italic'><strong>Chef</strong>: {chef}</p>
                         <p className='container-gallery-info'><strong>Stars: </strong>{starsArray.map((_, index) => (
           <FontAwesomeIcon key={index} icon={faStar} color="#FFFF00" />

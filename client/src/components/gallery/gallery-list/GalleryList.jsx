@@ -10,7 +10,10 @@ const Gallery = () => {
 
     useEffect(() => {
         restaurantService.getAll()
-            .then(result => setRestaurants(result));
+            .then(result => setRestaurants(result))
+            .catch(error => {
+                console.log(error)
+            });
     }, []);
     return(
         <section className="gallery">
