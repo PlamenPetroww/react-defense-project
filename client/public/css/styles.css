@@ -36,15 +36,7 @@ body {
   display: none;
 }
 
-.wrapper {
-  display: flex;
-  width: 80%;
-  max-width: 1170px;
-  margin: 0 auto;
-  background-color: #524F51;
-}
 
-/* -- TYPOGRAPHY -- */
 
 h2,
 .h2 {

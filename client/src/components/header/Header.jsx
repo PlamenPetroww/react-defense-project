@@ -33,6 +33,7 @@ const Header = () => {
             {isAuthenticated && (
             <div className="login">
                 <ul>
+                    {/* Tuk trqbwa da e Link, a ne a */}
                     <li><a href="">Logout</a></li>
                 </ul>
                 <span>Logged as: {username}</span>

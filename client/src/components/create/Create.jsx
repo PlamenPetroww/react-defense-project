@@ -49,11 +49,9 @@ const Create = ({
                      <label htmlFor="lastName"/>
                      <input type="text" name="email" placeholder="Email"/>
                      </div>
-                     <label htmlFor="email"/>
-                     <input type="text" name="address" placeholder="Address"/>
                      <div>
-                     <label htmlFor="imageUrl"/>
-                     <input type="text" name="imageUrl" placeholder="Your favourites Restaurant photo"/>
+                     <label htmlFor="image"/>
+                     <input type="text" name="imageUrl" placeholder="imageUrl"/>
                      </div>
                      <textarea name="description" htmlFor="description" placeholder="Your description" />               
                      <button className="button button--red--absenden" type="submit" name="absendenbutton">Create!</button>

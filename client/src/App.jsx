@@ -16,6 +16,7 @@ import RestaurantDetails from './components/restaurant-details/RestaurantDetails
 import Register from './components/user/register/Register';
 import Login from './components/user/login/Login';
 import Logout from './components/user/logout/logout';
+import NotFound from './components/Not-Found/Not-Found';
 
 function App() {
     const navigate = useNavigate();
@@ -31,6 +32,7 @@ function App() {
         const result = await authService.login(values.email, values.password);
         
         setAuth(result);
+        
         localStorage.setItem('accessToken', result.accessToken);
 
         navigate(Path.Home);
@@ -78,6 +80,7 @@ function App() {
                     <Route path="/register" element={<Register />}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path={Path.Logout} element={<Logout/>}/>
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             <Footer /> 
         </AuthContext.Provider>

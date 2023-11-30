@@ -66,7 +66,7 @@ const Register = () => {
                     name="absendenbutton">Registration!</button>
                     </div>
                     <p>
-                        <span>If you already have profile click <a href="">Here</a> </span>
+                        <span>If you already have profile click <Link to="/login">Here</Link> </span>
                     </p>
                 </form>
             </div>
