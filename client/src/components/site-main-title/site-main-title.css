@@ -1,3 +1,19 @@
+.site-main-title {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.site-main-title h1 {
+  text-align: center;
+}
+
+ol,
+#latest-news {
+  background: linear-gradient(to bottom,#f6f8f8, #ffffff, #f6f8f8);
+}
+
 .section-site-main,
 .section-site-main-thousand {
   font-family: Arial, sans-serif;
@@ -5,21 +21,18 @@
   color: #fff;
   margin: 0;
   padding: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-.section-site-main h2 {
+.section-site-main h2,
+.title-how-to-use h2,
+h1 {
   text-align: center;
-  padding-top: 1em;
+  font-style: italic;
 }
 
 .section-site-main p {
   padding: 0 4em 2em;
-  text-align: center;
-}
-
-.title-how-to-use h2 {
   text-align: center;
 }
 
@@ -35,7 +48,8 @@
 
 .new-produkt-title {
   margin: 0;
-  padding-top: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .new-produkt .new-produkt-p-center {

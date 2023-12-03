@@ -6,14 +6,7 @@
   background-color: #f6f8fa;
   font-family: "Padauk";
   font-size: 0.8rem;
-}
-
-.footer .footer__menu {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  justify-content: space-evenly;
-  flex: 1 1 70%;
+  margin-top: auto;
 }
 
 .footer .title-P {
@@ -22,10 +15,4 @@
   flex: 1 1 30%;
   justify-content: center;
   align-items: center;
-}
-
-.footer .footer__menu > a {
-  flex-grow: 1;
-  text-decoration: none;
-  color: grey;
 }

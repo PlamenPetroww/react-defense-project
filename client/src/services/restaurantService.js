@@ -14,6 +14,12 @@ export const create = async (restaurantData) => {
     return result;
 };
 
+export const edit = async (restraurantId, restaurantData) => {
+    const result = await request.put(`${baseUrl}/${restraurantId}`, restaurantData);
+
+    return result;
+};
+
 export const getOne = async (restaurantId) => {
     const result = await request.get(`${baseUrl}/${restaurantId}`);
 
@@ -22,12 +28,4 @@ export const getOne = async (restaurantId) => {
 
 
 
-// export const remove = async (productId) => {
-//     const response = await fetch(`${baseUrl}/${productId}`, {
-//         method: 'DELETE'
-//     });
-
-//     const result = await response.json();
-
-//     return result;
-// }
+export const remove = async (restaurantId) => request.remove(`${baseUrl}/${restaurantId}`);

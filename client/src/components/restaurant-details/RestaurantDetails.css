@@ -1,3 +1,5 @@
+
+
 .details {
     max-width: 1400px;
     padding: 0;
@@ -10,10 +12,11 @@
     flex-direction: column;
 }
 
-.container-details .details-title {
+.details-title {
     text-align: center;
     margin-top: 3em;
-    font-size: 2.5em;
+    font-size: 2em;
+    margin-left: -8em;
 }
 
 .details .restaurant-name {
@@ -40,13 +43,68 @@
     }
 }
 
+.comment-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-style: italic;
+}
+
+.create-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.only-comment {
+    flex: 0 0 40%;
+}
+
+.cubespinner {
+    margin-top: -100px;
+}
+
 .container-details {
     flex: 1 0 50%;
 }
 
+.ul-comment {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ul-comment li {
+    max-width: 400px;
+    width: 100%;
+    word-wrap: break-word;
+    background-color: yellow;
+    width: 46%;
+}
+
+.comment-paragraph {
+    font-style: italic;
+}
+
+.flex-2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.comment-cube-right {
+    width: 27%;
+    margin-left: 830px;
+    margin-top: -540px;
+}
+
+.comment-cube-left {
+    margin-left: -250px;
+}
+
 .image-details {
     flex: 1 0 50%;
-    margin-top: 18em;
     /*ako e display flex snimkata stava mnogo malka display: flex;
     justify-content: center;
     align-items: center; */
@@ -55,6 +113,37 @@
 .image-details img {
     width: 100%;
     height: auto;
+}
+
+.buttons-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons-options-together {
+    color: black;
+    background-color: #f6f8fa;
+    transition: background-color 0.3s ease; /* Плавен преход при смяна на цвета на фона */
+}
+
+.buttons-options-together:hover {
+    background-color: #dfe4ea; /* Цвят на фона при hover */
+}
+
+.buttons-options-edit,
+.buttons-options-delete {
+    width: 100px;
+    text-align: center;
+    padding-top: 0.8em;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавен преход при смяна на цвета на фона и текста */
+}
+
+.buttons-options-edit:hover,
+.buttons-options-delete:hover {
+    background-color: #3498db; /* Цвят на фона при hover */
+    color: white; /* Цвят на текста при hover */
 }
 
 .site-banner {

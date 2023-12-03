@@ -3,9 +3,9 @@
   width: 80%;
   height: 50px;
   background-color: #f6f8fa;
+  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
-  cursor: pointer;
 }
 
 .hauptmenu > * {
@@ -15,6 +15,15 @@
 
 .hauptmenu > span {
   padding-top: 13px;
+}
+
+.hauptmenu p {
+  color: black;
+}
+
+.hauptmenu p:hover {
+  color: #66ccff;
+  transition: color 300ms ease-in-out;
 }
 
 .logo {
@@ -58,6 +67,7 @@
 
 .hauptmenu .logo-1 .bolded {
   font-weight: bold;
+  font-family: math;
 }
 
 .hauptmenu .logo-1 div span {
@@ -70,6 +80,7 @@
 
 .hauptmenu .logo-1 .kl-logo {
   font-size: 12px;
+  font-family: cursive;
 }
 
 .kl-logo {

@@ -1,64 +1,72 @@
 .wrapper__nav {
-    display: flex;
-    width: 80%;
-    max-width: 1170px;
-    justify-content: space-between;
-    margin: 0 auto;
-    background-color: #191d20;
-    height: 32px;
-    flex-direction: reverse;
-  }
-  
-  .wrapper__nav .wrapper-media {
-    display: flex;
-    max-width: 1170px;
-    background-color: #191d20;
-  }
-  
-  .wrapper__nav .wrapper-media-sl {
-    width: 40px;
-    height: 40px;
-    margin-left: 1px;
-  }
-  
-  .wrapper__nav ul {
-    display: flex;
-    margin: 0;
-  }
-  
-  .wrapper__nav li {
-    display: block;
-    padding-left: 1em;
-  }
-  
-  .wrapper__nav li .icons {
-    color: white;
-  }
-  
-  .wrapper__nav .wagen {
-    min-width: 225px;
-    color: #F6F8FA;
-    cursor: pointer;
-    font-family: "Raleway";
-    font-weight: regular;
-    display: flex;
-    align-items: center;
-  }
-  
-  .wrapper__nav .login li {
-    padding-top: 5px;
-  }
-  
-  .wrapper__nav .login ul {
-    padding-left: 0;
-    padding-right: 40px;
-  }
-  
-  .wrapper__nav .login a {
-    text-decoration: none;
-    color: #F6F8FA;
-  }
-  
-  .wrapper__nav .wrapper-richtung span {
-    text-decoration: none;
-  }
+  display: flex;
+  width: 80%;
+  max-width: 1170px;
+  justify-content: space-between;
+  margin: 0;
+  background-color: #191d20;
+  height: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper__nav .wrapper-media {
+  display: flex;
+  max-width: 1170px;
+  background-color: #191d20;
+}
+
+.wrapper__nav .wrapper-media-sl {
+  width: 40px;
+  height: 40px;
+  margin-left: 1px;
+}
+
+.wrapper__nav ul {
+  display: flex;
+  margin: 0;
+}
+
+.wrapper__nav li {
+  display: block;
+  padding-left: 1em;
+}
+
+.wrapper__nav li .icons {
+  color: white;
+}
+
+.wrapper__nav .wagen {
+  min-width: 225px;
+  color: #f6f8fa;
+  cursor: pointer;
+  font-family: "Raleway";
+  font-weight: regular;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper__nav .login li {
+  padding-top: 5px;
+}
+
+.wrapper__nav .login ul {
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+.wrapper__nav .login a {
+  text-decoration: none;
+  color: #f6f8fa;
+}
+
+.wrapper__nav .wrapper-richtung span {
+  text-decoration: none;
+}
+ 
+.wrapper__nav .login ul li a:hover {
+    color: #66ccff;
+    transition: color 300ms ease-in-out;
+}
+
+ 

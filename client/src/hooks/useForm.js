@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function useForm (submitHandler, initialValues) {
-    const [values, setValues] = useState({/* tuk imah predi slojen initialValues, no mpri register mi izlizashe v consolata i go mahnah */});
+    const [values, setValues] = useState(initialValues);
+
+    /* useEffect(() => {
+        setValues(initialValues);
+    }, [initialValues]) */
 
     const onChange = (e) => {
         setValues(state => ({
@@ -12,6 +16,16 @@ export default function useForm (submitHandler, initialValues) {
 
     const onSubmit = (e) => {
         e.preventDefault();
+
+        /* if(values.email === '' || values.password === '') {
+            alert('Wrong');
+            return;
+        }
+
+        if (values.password !== values['confirm-password']) {
+            alert('Passwords do not match');
+            return;
+        } */
 
         submitHandler(values);
     }

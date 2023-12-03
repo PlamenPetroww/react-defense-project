@@ -11,10 +11,12 @@ import About from './components/about/About';
 import Create from './components/create/Create';
 import Main from './components/main/Main';
 import RestaurantDetails from './components/restaurant-details/RestaurantDetails';
+import RestaurantEdit from './components/restaurant-edit/RestaurantEdit';
 import Register from './components/user/register/Register';
 import Login from './components/user/login/Login';
 import Logout from './components/user/logout/logout';
 import NotFound from './components/Not-Found/Not-Found';
+import AuthGuard from './components/guards/authGuard';
 
 function App() {
     
@@ -28,10 +30,11 @@ function App() {
             <Hauptmenu />
                 <Routes>
                     <Route path={Path.Home} element={<Main />}/>
-                    <Route path="/gallery" element={<GalleryList />}/>
-                    <Route path="/create" element={<Create />}/>
+                    <Route path="/gallery" element={<AuthGuard><GalleryList /></AuthGuard>}/>
+                    <Route path="/create" element={<AuthGuard><Create /></AuthGuard>}/>
                     <Route path="/about" element={<About />}/>
                     <Route path="/gallery/:restaurantId" element={<RestaurantDetails />} />
+                    <Route path={Path.RestaurantEdit} element={<AuthGuard><RestaurantEdit /></AuthGuard>} />
                     <Route path="/register" element={<Register />}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path={Path.Logout} element={<Logout/>}/>
