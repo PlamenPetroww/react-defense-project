@@ -73,9 +73,10 @@ const RestaurantDetails = () => {
   return (
 
     <>
-                <h1 className="details-title">Hier you receive all Information about your favourites Restaurant</h1>
-        <section className="details">
-            <div className="container-details">
+        <section id="details-title">
+            <div className="info-section">
+                <div className="restaurant-header">
+                <img className="restaurant-img" src={restaurant.imageUrl} alt="restaurant-photo" />
                 <h2 className="restaurant-name">Restaurant Name: {restaurant.title}</h2>
                 <p><strong>Chef:</strong> {restaurant.chef}</p>
                 <p><strong>Category: </strong>{restaurant.category}</p>
@@ -85,8 +86,25 @@ const RestaurantDetails = () => {
                 <FontAwesomeIcon key={index} icon={faStar} color="#FFFF00" />
             ))}
             </p>
-                <p>For contact:  {restaurant.email}</p>
-                <p>Restaurant description: <br /> {restaurant.description}</p>
+                <p><strong>For contact:  </strong>{restaurant.email}</p>
+                <p><strong>Restaurant description: </strong><br /> {restaurant.description}</p>
+                </div>
+
+                <div className="details-comments">
+                    <h2>Comments:</h2>
+                    <ul>
+                        {comments.map(({ _id, text, owner: { email } }) => (
+                            <li key={_id} className="comment">
+                                <p>{email}: {text}</p>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {comments.length === 0 && (
+                        <p className="no-comment">No comments.</p>
+                    )}
+                </div>
+                
                 {userId === restaurant._ownerId && (
         <div className="buttons-options">
             <Link className="buttons-options-together buttons-options-edit" to={pathToUrl(Path.RestaurantEdit, {restaurantId})}>Edit</Link>
@@ -94,42 +112,20 @@ const RestaurantDetails = () => {
         </div>
         )}
             </div>
-            <div className="image-details">
-                <div className="site-banner">
-                    <p>Looks incredible</p>
-                    <img src={restaurant.imageUrl} alt="restaurant-photo" />
-                </div>
-            </div>
-        </section>
-        
-            {/* Restaurants Commentary */}
-                <h2 className="comment-title">Add your Comment to this Restaurant</h2>
-        {/* <div className="flex-2">
-            <ul className="ul-comment">
-                {comments.map(({_id, text, owner: {email}}) => (
-                    <li key={_id}>
-                    <p className="comment-paragraph"><strong>{email}: <br /> </strong>{text}</p>
-                </li>
-                ))}
-            </ul>
-            <div className="comment-cube-right">
-                <Cube />
-            </div>
-            {comments.length === 0} {
-                <p>No comments.</p>
-            }
-        </div> */}
 
-        
-        <article className="">
-                {/* Zada se resetvat vsichki inputi sled natiskane na butona Add Comment trqbwa da izpolzvam kontrolirani formi - trqbwa da go poprawq */}
-                <label>Add new comment:</label>
-                <form onSubmit={onSubmit}>
-                    <textarea name="comment" value={values.comment} onChange={onChange} placeholder="Comment..."></textarea>
-                <input type="submit" value="Add Comment" />
-                </form>
-        </article>
-        
+            <article className="create-comment-article">
+                <div className="create-comment">
+                        <label>Add new comment:</label>
+                        <form onSubmit={onSubmit}>
+                            <textarea name="comment" value={values.comment} onChange={onChange} placeholder="Comment..."></textarea>
+                            <input className="btn submit" type="submit" value="Add Comment" />
+                        </form>
+                </div>
+                <div className="cube">
+                    <Cube />
+                </div>
+            </article>
+        </section>
     </>
   );
 };

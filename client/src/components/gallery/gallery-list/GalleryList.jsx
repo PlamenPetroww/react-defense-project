@@ -17,7 +17,7 @@ const Gallery = () => {
     }, []);
     return(
         <section className="gallery">
-            <div className="container">
+            <div className="gallery-container">
                 <h1 className="gallery-container-title">Gallery</h1>
                 {restaurants.map(restaurant => (
                     <GalleryRestaurantList key={restaurant._id} {...restaurant}/>

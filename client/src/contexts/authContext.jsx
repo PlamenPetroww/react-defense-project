@@ -13,34 +13,44 @@ export const AuthProvider = ({
 }) => {
 
     const navigate = useNavigate();
-
+    const [authError, setAuthError] = useState(null);
     const [auth, setAuth] = useState(() => {
         localStorage.removeItem('accessToken');
 
         return {};
     });
 
-    const loginSubmitHandler = async (values) => {
+    // const loginSubmitHandler = async (values) => {
         
+    //     const result = await authService.login(values.email, values.password);
+        
+    //     setAuth(result);
+        
+    //     localStorage.setItem('accessToken', result.accessToken);
+
+    //     navigate(Path.Home);
+    // };
+
+    const loginSubmitHandler = async (values) => {
         try {
             const result = await authService.login(values.email, values.password);
             
             setAuth(result);
             
             localStorage.setItem('accessToken', result.accessToken);
-    
+
             navigate(Path.Home);
         } catch (error) {
-            console.error('Login failed:', error);
-            
-            if (error && error.message) {
-                alert(error.message); // Показва съобщението за грешка на потребителя
+            console.error('error', error.message);
+            setAuthError(error.message);
+            if (error.status === 403) {
+                alert('Incorrect password. Please try again.');
             } else {
-                alert('Login failed. Please try again.'); // Стандартно съобщение за грешка
+                alert('Incorrect password. Please try again.');
             }
         }
     };
-    
+
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.email, values.password)
         

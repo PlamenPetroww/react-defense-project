@@ -1,179 +1,143 @@
 
-
-.details {
-    max-width: 1400px;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.container-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.details-title {
-    text-align: center;
-    margin-top: 3em;
-    font-size: 2em;
-    margin-left: -8em;
-}
-
-.details .restaurant-name {
-    text-align: center;
-}
-
-.details p {
-    margin-left: 6em;
-}
-
-.container-gallery-info {
-    display: inline-block;
-    position: relative;
-}
-  
-.container-gallery-info .fa-star {
-    position: relative;
-    animation: bounce 0.5s infinite alternate;
-}
-  
 @keyframes bounce {
     to {
       transform: translateY(-5px);
     }
 }
 
-.comment-title {
+#details-title {
+    position: relative;
+    display: block;
+    width: 980px;
+    margin: 90px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+#details-title>h1 {
+    color: #fff;
+    font-family: "Agency FB";
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
     text-align: center;
-    font-size: 2.5em;
-    font-style: italic;
+}
+
+.info-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.info-section>.text {
+    margin-top: 30px;
+    padding: 60px;
+    height: 50%;
+}
+
+.restaurant-header {
+    position: relative;
+    padding: 25px;
+    height: 40%;
+}
+
+.restaurant-img {
+    position: relative;
+    float: left;
+    margin-left: 15px;
+    margin-right: 22px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.create-comment>.form>textarea {
+    resize: none;
+    width: 100px;
+    height: 100px;
+    margin-top: 22px;
+    margin-bottom: 28px;
+    padding: 5px;
+}
+
+.details-comments {
+    display: table-cell;
 }
 
 .create-comment {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.only-comment {
-    flex: 0 0 40%;
-}
-
-.cubespinner {
-    margin-top: -100px;
-}
-
-.container-details {
-    flex: 1 0 50%;
-}
-
-.ul-comment {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.ul-comment li {
-    max-width: 400px;
-    width: 100%;
-    word-wrap: break-word;
-    background-color: yellow;
-    width: 46%;
-}
-
-.comment-paragraph {
-    font-style: italic;
-}
-
-.flex-2 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3em;
-}
-
-.comment-cube-right {
-    width: 27%;
-    margin-left: 830px;
-    margin-top: -540px;
-}
-
-.comment-cube-left {
-    margin-left: -250px;
-}
-
-.image-details {
-    flex: 1 0 50%;
-    /*ako e display flex snimkata stava mnogo malka display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-
-.image-details img {
-    width: 100%;
-    height: auto;
-}
-
-.buttons-options {
-    display: flex;
-    justify-content: space-around;
-}
-
-.buttons-options-together {
-    color: black;
-    background-color: #f6f8fa;
-    transition: background-color 0.3s ease; /* Плавен преход при смяна на цвета на фона */
-}
-
-.buttons-options-together:hover {
-    background-color: #dfe4ea; /* Цвят на фона при hover */
-}
-
-.buttons-options-edit,
-.buttons-options-delete {
-    width: 100px;
-    text-align: center;
-    padding-top: 0.8em;
-    text-decoration: none;
-    border: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Плавен преход при смяна на цвета на фона и текста */
-}
-
-.buttons-options-edit:hover,
-.buttons-options-delete:hover {
-    background-color: #3498db; /* Цвят на фона при hover */
-    color: white; /* Цвят на текста при hover */
-}
-
-.site-banner {
-    overflow: hidden;
-    border-radius: 0.3em;
-    margin-top: 0.3em;
+    margin-top: 60px;
     position: relative;
+    text-align: center;
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #6f5d9c;
+    box-shadow: 0px 0px 32px 0px #32485e, -14px -14px 20px #191c21;
 }
 
-.site-banner:before,
-.site-banner:after {
-    display: block;
-    content: '';
+.create-comment>label {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+    line-height: normal;
 }
 
-.site-banner:before {
-    padding-top: 56.25%;
+.create-comment-article {
+    display: flex;
 }
 
-.site-banner:after {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    box-shadow: 0 0 1em 0 rgba(0,0,0,0.3) inset;
+.create-comment-article .cube {
+    margin-left: 2em;
 }
 
-.site-banner img {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+.info-section>.details-comments li {
+    width: 400px;
+    display: inline-block;
+    position: static;
+    margin: 20px auto 25px auto;
+    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 16px;
+    margin-left: 60px;
+    background: #f6f8fa;
+    color: black;
 }
-  
+
+.comment p {
+    padding: 16px;
+}
+
+.create-comment>.button:hover {
+    background-color: #41425c;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons {
+    height: 10%;
+    text-align: right;
+    padding-right: 15px;
+    padding-bottom: 40px;
+}
+
+.button {
+    height: 15%;
+    background-color: #54557b;
+    padding: 14px;
+    margin-top: auto;
+    font-size: 21px;
+    color: rgb(255, 255, 255);
+}
+
+.button:hover {
+    background-color: #6f5d9c;
+    color: white;
+}

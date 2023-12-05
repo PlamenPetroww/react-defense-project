@@ -1,7 +1,14 @@
+.gallery-container {
+    background-color: #2c3035;
+    display: flex;
+    flex-direction: column;
+}
+
 .gallery-container-title {
     text-align: center;
-    padding-top: 2em;
-    font-size: 3ems;
+    padding-top: 3em;
+    font-size: 2em;
+    color: #f6f8fa;
 }
 
 .cards-layout {
@@ -68,8 +75,12 @@
     padding-left: 35px;
 }
   
-  .card .details-paragraph:hover {
+.card .details-paragraph:hover {
     background-color: #2c3035;
+}
+
+.card .details-paragraph a:hover {
+    color: #f6f8fa;
 }
 
 .card .container-gallery-info {

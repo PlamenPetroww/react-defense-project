@@ -29,21 +29,17 @@
 
 .wrapper__nav li {
   display: block;
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 
-.wrapper__nav li .icons {
+.wrapper__nav li .icons,
+.wrapper__nav .username {
   color: white;
 }
 
-.wrapper__nav .wagen {
-  min-width: 225px;
-  color: #f6f8fa;
-  cursor: pointer;
-  font-family: "Raleway";
-  font-weight: regular;
-  display: flex;
-  align-items: center;
+.wrapper__nav .username {
+  margin-right: 6em;
+  margin-top: 0.3em;
 }
 
 .wrapper__nav .login li {

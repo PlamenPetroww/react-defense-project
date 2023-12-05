@@ -30,12 +30,16 @@ const Header = () => {
                 </a></li>
                 </ul>
                 </div>
+                {isAuthenticated && (
+                <div className="username">
+                    <span>Logged as: {username}</span>
+                </div>
+                )}
             {isAuthenticated && (
-            <div className="login">
+                <div className="login">
                 <ul>
                     <li><Link to="/logout">Logout</Link></li>
                 </ul>
-                <span>Logged as: {username}</span>
             </div>
             )}
             {!isAuthenticated && (
