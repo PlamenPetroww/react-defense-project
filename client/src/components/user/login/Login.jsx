@@ -1,8 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import useForm from "../../../hooks/useForm";
 import AuthContext from "../../../contexts/authContext";
+import {emailValidator,
+    passwordValidator}
+    from '../../errors/Error';
 
 import './login.css';
+import styles from './login.css';
 const LoginFormKeys = {
     Email: 'email',
     Password: 'password',
@@ -10,11 +14,23 @@ const LoginFormKeys = {
 
 const Login = () => {
 
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
     const {loginSubmitHandler} = useContext(AuthContext);
     const {values, onChange, onSubmit} = useForm(loginSubmitHandler, {
         [LoginFormKeys.Email]: '',
         [LoginFormKeys.Password]: '',
     });
+
+    const emailHandler = () => {
+        const error = emailValidator(values[LoginFormKeys.Email]);
+        setEmailError(error);
+    };
+
+    const passwordHandler = () => {
+        const error = passwordValidator(values[LoginFormKeys.Password]);
+        setPasswordError(error);
+    }
 
     return (
         <section className="ontainer">
@@ -31,7 +47,11 @@ const Login = () => {
                     placeholder="Your Email"
                     onChange={onChange}
                     value={values[LoginFormKeys.Email]}
+                    onBlur={emailHandler}
                     />
+                    {emailError && (
+                            <p className={styles.errorMessage}>{emailError}</p>
+                        )}
                     <div>
                     <input id="login-password"
                     type="password"
@@ -39,7 +59,11 @@ const Login = () => {
                     placeholder="Your Password"
                     onChange={onChange}
                     value={values[LoginFormKeys.Password]}
+                    onBlur={passwordHandler}
                     />
+                    {passwordError && (
+                            <p className={styles.errorMessage}>{passwordError}</p>
+                        )}
                     </div>
                     <button
                     className="button button--red--absenden"

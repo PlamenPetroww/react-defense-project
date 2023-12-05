@@ -1,15 +1,22 @@
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 import AuthContext from "../../../contexts/authContext";
 import useForm from "../../../hooks/useForm";
 
+import {emailValidator,
+    passwordValidator,
+    confirmPasswordValidator}
+    from '../../errors/Error';
+
 import './register.css';
 import styles from './register.css';
-import { Link } from "react-router-dom";
 
 const Register = () => {
 
     const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [confirmError, setConfirmError] = useState('');
 
     const RegisterFormKeys = {
         Email: 'email',
@@ -24,11 +31,20 @@ const Register = () => {
         [RegisterFormKeys.ConfirmPassword]: '',
     });
 
-    const emailValidator = () => {
-        if(values.Email !== 'siana@abv.bg') {
-            setEmailError('Email must be Siana');
-        }
+    const emailHandler = () => {
+        const error = emailValidator(values[RegisterFormKeys.Email]);
+        setEmailError(error);
+    };
+
+    const passwordHandler = () => {
+        const error = passwordValidator(values[RegisterFormKeys.Password]);
+        setPasswordError(error);
     }
+
+    const confirmPasswordHandler = () => {
+        const error = confirmPasswordValidator(values[RegisterFormKeys.Password], values[RegisterFormKeys.ConfirmPassword]);
+        setConfirmError(error);
+    };
 
     return (
         <section className="ontainer-anmelden">
@@ -45,7 +61,7 @@ const Register = () => {
                         placeholder="Your Email" 
                         onChange={onChange}
                         values={values[RegisterFormKeys.Email]}
-                        onBlur={emailValidator}
+                        onBlur={emailHandler}
                         />
                         {emailError && (
                             <p className={styles.errorMessage}>{emailError}</p>
@@ -58,7 +74,11 @@ const Register = () => {
                         placeholder="Password"
                         onChange={onChange}
                         values={values[RegisterFormKeys.Password]}
+                        onBlur={passwordHandler}
                         />
+                        {passwordError && (
+                            <p className={styles.errorMessage}>{passwordError}</p>
+                        )}
                     </div>
                     <div className="kontakt-formular-center">
                         <input 
@@ -68,7 +88,11 @@ const Register = () => {
                         placeholder="Confirm Password"
                         onChange={onChange}
                         values={values[RegisterFormKeys.ConfirmPassword]}
+                        onBlur={confirmPasswordHandler}
                     />
+                    {confirmError && (
+                            <p className={styles.errorMessage}>{confirmError}</p>
+                        )}
                     <br />
                     <button
                     className="button button--red--absenden"

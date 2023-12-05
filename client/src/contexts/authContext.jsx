@@ -21,16 +21,26 @@ export const AuthProvider = ({
     });
 
     const loginSubmitHandler = async (values) => {
-        // I tuk shte mi trqbwa da imam try catch
-        const result = await authService.login(values.email, values.password);
         
-        setAuth(result);
-        
-        localStorage.setItem('accessToken', result.accessToken);
-
-        navigate(Path.Home);
+        try {
+            const result = await authService.login(values.email, values.password);
+            
+            setAuth(result);
+            
+            localStorage.setItem('accessToken', result.accessToken);
+    
+            navigate(Path.Home);
+        } catch (error) {
+            console.error('Login failed:', error);
+            
+            if (error && error.message) {
+                alert(error.message); // Показва съобщението за грешка на потребителя
+            } else {
+                alert('Login failed. Please try again.'); // Стандартно съобщение за грешка
+            }
+        }
     };
-
+    
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.email, values.password)
         
