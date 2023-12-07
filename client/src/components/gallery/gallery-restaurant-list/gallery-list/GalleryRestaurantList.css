@@ -52,4 +52,38 @@
     padding: 20px;
 }
 
+@keyframes bounceStars {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    
+    40% {
+      transform: translateY(-10px);
+    }
+    
+    60% {
+      transform: translateY(-5px);
+    }
+}
+
+.container-gallery-info .fa-star {
+animation: bounceStars 2s ease infinite;
+}
+
+.container-gallery-info .fa-star:nth-child(2) {
+animation-delay: 0.1s;
+}
+
+.container-gallery-info .fa-star:nth-child(3) {
+animation-delay: 0.8s;
+}
+
+.container-gallery-info .fa-star:nth-child(4) {
+animation-delay: 0.3s;
+}
+
+.container-gallery-info .fa-star:nth-child(5) {
+animation-delay: 0.6s;
+}
+
 

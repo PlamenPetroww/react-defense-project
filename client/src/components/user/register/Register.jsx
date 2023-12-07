@@ -7,7 +7,7 @@ import useForm from "../../../hooks/useForm";
 import {emailValidator,
     passwordValidator,
     confirmPasswordValidator}
-    from '../../errors/Error';
+    from '../../../errors/Error';
 
 import './register.css';
 import styles from './register.css';

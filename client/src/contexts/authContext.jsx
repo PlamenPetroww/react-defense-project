@@ -44,9 +44,9 @@ export const AuthProvider = ({
             console.error('error', error.message);
             setAuthError(error.message);
             if (error.status === 403) {
-                alert('Incorrect password. Please try again.');
+                alert('Incorrect email or password. Please try again.');
             } else {
-                alert('Incorrect password. Please try again.');
+                alert('Incorrect email or password. Please try again.');
             }
         }
     };
@@ -65,8 +65,6 @@ export const AuthProvider = ({
         setAuth({});
         localStorage.removeItem('accessToken');
     }
-
-    //Trqbwa da si sloja nqkaude i valudaciq dali confirm password otgovarq na password
 
     const values = {
         loginSubmitHandler,

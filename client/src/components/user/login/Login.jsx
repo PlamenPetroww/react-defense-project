@@ -3,7 +3,7 @@ import useForm from "../../../hooks/useForm";
 import AuthContext from "../../../contexts/authContext";
 import {emailValidator,
     passwordValidator}
-    from '../../errors/Error';
+    from '../../../errors/Error';
 
 import './login.css';
 import styles from './login.css';

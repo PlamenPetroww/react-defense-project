@@ -3,8 +3,6 @@ import './GalleryRestaurantList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-import formatIsoDateToHumanReadable from '../../../../utils/isoData';
-
 const GalleryRestaurantList = ({
     _id,
     title,

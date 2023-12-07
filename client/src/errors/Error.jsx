@@ -1,4 +1,4 @@
-// emailValidator.js
+
 
 export const emailValidator = (email) => {
     if (email.length === 0) {
@@ -15,7 +15,7 @@ export const passwordValidator = (password) => {
         return 'Password is required';
     } else if (password < 6) {
         return 'Password must be at least 6 charachters';
-    } /* else if {} */
+    } 
     
     return '';
 }

@@ -59,3 +59,20 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+.formular #kontakt-formular div p {
+  color: red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.5em;
+}
+
+.inputError {
+  border: 1px solid red;
+}
+
+.styles {
+  color: red;
+}
