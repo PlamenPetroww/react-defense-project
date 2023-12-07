@@ -101,30 +101,32 @@ const RestaurantDetails = () => {
                     </ul>
 
                     {comments.length === 0 && (
-                        <p className="no-comment">No comments.</p>
+                        <p className="no-comment">You can be the first to comment on the <strong>{restaurant.title}</strong> restaurant.</p>
                     )}
                 </div>
                 
                 {userId === restaurant._ownerId && (
-        <div className="buttons-options">
-            <Link className="buttons-options-together buttons-options-edit" to={pathToUrl(Path.RestaurantEdit, {restaurantId})}>Edit</Link>
-            <button className="buttons-options-together buttons-options-delete" onClick={deleteButtonClickHandler}>Delete</button>
-        </div>
-        )}
-            </div>
+                <div className="buttons-options">
+                    <Link className="button edit" to={pathToUrl(Path.RestaurantEdit, {restaurantId})}>Edit</Link>
+                    <button className="button delete" onClick={deleteButtonClickHandler}>Delete</button>
+                </div>
+                )}
+                </div>
 
-            <article className="create-comment-article">
-                <div className="create-comment">
-                        <label>Add new comment:</label>
-                        <form onSubmit={onSubmit}>
-                            <textarea name="comment" value={values.comment} onChange={onChange} placeholder="Comment..."></textarea>
-                            <input className="btn submit" type="submit" value="Add Comment" />
-                        </form>
-                </div>
-                <div className="cube">
-                    <Cube />
-                </div>
-            </article>
+            {userId !== restaurant._ownerId && (
+                <article className="create-comment-article">
+                    <div className="create-comment">
+                    <label>Add new comment:</label>
+                    <form onSubmit={onSubmit}>
+                        <textarea name="comment" value={values.comment} onChange={onChange} placeholder="Comment..."></textarea> <br />
+                        <input className="button comment" type="submit" value="Add Comment" />
+                    </form>
+                    </div>
+                    <div className="cube">
+                        <Cube />
+                    </div>
+                </article>
+            )}
         </section>
     </>
   );
