@@ -62,11 +62,13 @@ const RestaurantEdit = () => {
              <div className="anmelden__tok">
                  <h2 className="anmelden">Show Your Restaurant to the World</h2>
              </div>
-             <div className="formular">
+             <div className="formular input">
                  <form onSubmit={editProductSubmitHandler} id="kontakt-formular">
-                     <div className="kontakt-formular-center">
-                     <label htmlFor="title">Your Restarurant Name: </label>
+                     <div className="kontakt-formular-center input">
+                        <div>
+                     <label htmlFor="title">Name: </label>
                      <input type="text" id="title" name="title" value={restaurant.title} onChange={onChange} placeholder="Title" />
+                     </div>
                      <div>
                      <label htmlFor="category">Chef: </label>
                      <input type="text" id="chef" name="chef" value={restaurant.chef} onChange={onChange} placeholder="Chef"/>
@@ -88,10 +90,10 @@ const RestaurantEdit = () => {
                      <input type="text" name="email" value={restaurant.email} onChange={onChange} placeholder="Email"/>
                      </div>
                      <div>
-                     <label htmlFor="imageUrl">ImageUrl</label>
+                     <label htmlFor="imageUrl">ImageUrl: </label>
                      <input type="text" id="imageUrl" name="imageUrl" value={restaurant.imageUrl} onChange={onChange} placeholder="imageUrl"/>
                      </div>
-                     <textarea name="description" value={restaurant.description} onChange={onChange} id="description" htmlFor="description" placeholder="Your description" />               
+                     <textarea name="description input" value={restaurant.description} onChange={onChange} id="description" htmlFor="description" placeholder="Your description" />               
                      <button className="button button--red--absenden" type="submit" name="absendenbutton" value="Edit Restaurants">Edit</button>
                      </div>
                  </form>

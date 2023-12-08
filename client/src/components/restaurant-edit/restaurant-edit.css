@@ -39,3 +39,22 @@
   margin-bottom: 2em;
   width: 50%;
 }
+
+.formular input {
+  text-align: left;
+}
+
+.ontainer-with-cube #kontakt-formular .kontakt-formular-center input{
+  width: 300px;
+}
+
+.ontainer-with-cube .formular input {
+  text-align: left;
+}
+
+.ontainer-with-cube .formular textarea {
+  min-width: 370px;
+  max-width: 370px;
+  min-height: 100px;
+  max-height: 100px;
+}
