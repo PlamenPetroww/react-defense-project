@@ -23,18 +23,25 @@ const RestaurantDetails = () => {
     const [comments, dispatch] = useReducer(reducer, [])
     const { restaurantId } = useParams();
 
-  useEffect(() => {
-    restaurantService.getOne(restaurantId)
-        .then(setRestaurant);
-    //dobre e tuk da si sloja oshte edin .then i posle .catch ako e greshno da navigira kum 404
-        commentService.getAll(restaurantId)
-            .then((result) => {
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const restaurantResult = await restaurantService.getOne(restaurantId);
+                setRestaurant(restaurantResult);
+    
+                const commentResult = await commentService.getAll(restaurantId);
                 dispatch({
                     type: 'GET_ALL_COMMENTS',
-                    payload: result,
-                })
-            });
-    }, [restaurantId]);
+                    payload: commentResult,
+                });
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                navigate(Path.NotFound);
+            }
+        };
+    
+        fetchData();
+    }, [restaurantId, dispatch]);
 
   const addCommentHandler = async (values) => {
 

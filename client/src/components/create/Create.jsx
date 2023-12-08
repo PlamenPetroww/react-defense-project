@@ -18,6 +18,8 @@ const formInitialState = {
 }
 
 const Create = ({ onClose }) => {
+
+ 
     const navigate = useNavigate();
     const [formValues, setFormValues] = useState(formInitialState);
 
@@ -198,16 +200,37 @@ const Create = ({ onClose }) => {
     const createProductSubmitHandler = async (e) => {
     e.preventDefault();
 
-    const restaurantData = Object.fromEntries(new FormData(e.currentTarget));
+    const requiredFields = [
+      'title', 'chef', 'city', 'category', 'stars', 'email', 'description', 'imageUrl'
+    ];
 
-    try {
-      await restaurantService.create(restaurantData);
+    const errorMessages = {};
 
-      navigate("/gallery");
-    } catch (err) {
-      console.log(err);
-    }
-  };
+    requiredFields.forEach((field) => {
+      if (formValues[field].trim() === '') {
+          errorMessages[field] = 'This field is required!';
+      }
+  });
+
+  if (Object.keys(errorMessages).length > 0) {
+    setValidate((state) => ({
+        ...state,
+        ...errorMessages,
+    }));
+    return;
+}
+
+
+  try {
+        const restaurantData = Object.fromEntries(new FormData(e.currentTarget));
+        
+        await restaurantService.create(restaurantData);
+
+        navigate("/gallery");
+      } catch (err) {
+        console.error("Error creating restaurant:", err);
+      }
+    };
 
   return (
     <>
