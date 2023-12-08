@@ -1,8 +1,11 @@
 import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import * as restaurantService from '../../services/restaurantService';
+import { validateTitle } from '../../validate/validate';
+
 import './restaurant-edit.css';
-import { useEffect, useState } from 'react';
+
 const RestaurantEdit = () => {
 
     const navigate = useNavigate();
@@ -17,6 +20,10 @@ const RestaurantEdit = () => {
         imageUrl: '',
         description: '',
     });
+
+    const [validate, setValidate] = useState({
+        title: '',
+      });
     
     useEffect(() => {
         restaurantService.getOne(restaurantId)
@@ -42,11 +49,12 @@ const RestaurantEdit = () => {
 
 
     const onChange = (e) => {
-        setRestaurant(state => ({
-            ...state,
-            [e.target.name]: e.target.value
-        }));
-    };
+        const { name, value } = e.target;
+        setRestaurant((state) => ({ ...state, [name]: value }));
+        setValidate((state) => ({ ...state, [name]: '' }));
+      };
+
+
 
 
     return (

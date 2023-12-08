@@ -30,15 +30,15 @@ function App() {
             <Hauptmenu />
                 <Routes>
                     <Route path={Path.Home} element={<Main />}/>
-                    <Route path="/gallery" element={<AuthGuard><GalleryList /></AuthGuard>}/>
-                    <Route path="/create" element={<AuthGuard><Create /></AuthGuard>}/>
-                    <Route path="/about" element={<About />}/>
-                    <Route path="/gallery/:restaurantId" element={<RestaurantDetails />} />
+                    <Route path={Path.Gallery} element={<AuthGuard><GalleryList /></AuthGuard>}/>
+                    <Route path={Path.Create} element={<AuthGuard><Create /></AuthGuard>}/>
+                    <Route path={Path.About} element={<About />}/>
+                    <Route path={Path.GalleryRestaurantId} element={<RestaurantDetails />} />
                     <Route path={Path.RestaurantEdit} element={<AuthGuard><RestaurantEdit /></AuthGuard>} />
-                    <Route path="/register" element={<Register />}/>
-                    <Route path="/login" element={<Login/>}/>
+                    <Route path={Path.Register} element={<Register />}/>
+                    <Route path={Path.Login} element={<Login/>}/>
                     <Route path={Path.Logout} element={<Logout/>}/>
-                    <Route path="*" element={<NotFound />} />
+                    <Route path={Path.NotFound} element={<NotFound />} />
                 </Routes>
             <Footer /> 
         </AuthProvider>

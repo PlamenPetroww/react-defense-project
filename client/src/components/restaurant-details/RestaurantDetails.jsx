@@ -47,7 +47,9 @@ const RestaurantDetails = () => {
             dispatch({
                 type: 'ADD_COMMENT',
                 payload: newComment
-            }) 
+            });
+
+            values.comment = '';
         }
 
         const deleteButtonClickHandler = async () => {
