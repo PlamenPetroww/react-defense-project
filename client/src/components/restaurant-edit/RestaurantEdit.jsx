@@ -1,6 +1,9 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import * as restaurantService from '../../services/restaurantService';
 
 import './restaurant-edit.css';
@@ -45,14 +48,16 @@ const RestaurantEdit = () => {
             e.preventDefault();
 
             try {
-            const values = Object.fromEntries(new FormData(e.currentTarget))
-            await restaurantService.edit(restaurantId, values);
-
-            navigate('/gallery');
-        } catch(err) {
-            console.error("Error creating restaurant:", err);
-            navigate(Path.NotFound)
-        }
+                const values = Object.fromEntries(new FormData(e.currentTarget));
+                await restaurantService.edit(restaurantId, values);
+    
+                toast.success('Restaurant updated successfully');
+                navigate('/gallery');
+            } catch (err) {
+                console.error('Error updating restaurant:', err);
+                toast.error('Error updating restaurant. Please try again.');
+                navigate(Path.NotFound);
+            }
     }
 
     const onChange = (e) => {

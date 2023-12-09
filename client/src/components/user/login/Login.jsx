@@ -1,5 +1,9 @@
 import { useContext, useState } from "react";
 import useForm from "../../../hooks/useForm";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import AuthContext from "../../../contexts/authContext";
 import {emailValidator,
     passwordValidator}
@@ -17,10 +21,26 @@ const Login = () => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const {loginSubmitHandler} = useContext(AuthContext);
-    const {values, onChange, onSubmit} = useForm(loginSubmitHandler, {
+    /* const {values, onChange, onSubmit} = useForm(loginSubmitHandler, {
         [LoginFormKeys.Email]: '',
         [LoginFormKeys.Password]: '',
-    });
+    }); */
+
+    const { values, onChange, onSubmit } = useForm(
+        async () => {
+          try {
+            await loginSubmitHandler(values);
+          } catch (error) {
+            console.error('Login Failed', error);
+          }
+        },
+        {
+          [LoginFormKeys.Email]: '',
+          [LoginFormKeys.Password]: '',
+        }
+      );
+
+    
 
     const emailHandler = () => {
         const error = emailValidator(values[LoginFormKeys.Email]);
@@ -34,6 +54,7 @@ const Login = () => {
 
     return (
         <section className="ontainer">
+            <ToastContainer />
             <div className="anmelden__tok">
                 <h2 className="anmelden">You can loged</h2>
             </div>

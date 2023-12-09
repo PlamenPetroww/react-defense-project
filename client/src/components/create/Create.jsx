@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 import * as restaurantService from "../../services/restaurantService";
 
@@ -18,7 +19,6 @@ const formInitialState = {
 }
 
 const Create = ({ onClose }) => {
-
  
     const navigate = useNavigate();
     const [formValues, setFormValues] = useState(formInitialState);
@@ -38,7 +38,7 @@ const Create = ({ onClose }) => {
 
         setFormValues(state => ({
             ...state,
-            [e.target.name]: e.target.value
+            [e.target.name]: value
         }));
     }
    
@@ -200,7 +200,7 @@ const Create = ({ onClose }) => {
     const createProductSubmitHandler = async (e) => {
     e.preventDefault();
 
-    const requiredFields = [
+    /* const requiredFields = [
       'title', 'chef', 'city', 'category', 'stars', 'email', 'description', 'imageUrl'
     ];
 
@@ -210,15 +210,15 @@ const Create = ({ onClose }) => {
       if (formValues[field].trim() === '') {
           errorMessages[field] = 'This field is required!';
       }
-  });
+  }); */
 
-  if (Object.keys(errorMessages).length > 0) {
+  /* if (Object.keys(errorMessages).length > 0) {
     setValidate((state) => ({
         ...state,
         ...errorMessages,
     }));
     return;
-}
+} */
 
 
   try {
@@ -226,9 +226,11 @@ const Create = ({ onClose }) => {
         
         await restaurantService.create(restaurantData);
 
+        toast.success('Restaurant created successfully');
         navigate("/gallery");
       } catch (err) {
         console.error("Error creating restaurant:", err);
+        toast.error('Error creating restaurant. Please try again.');
       }
     };
 

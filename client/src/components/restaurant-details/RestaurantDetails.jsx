@@ -1,6 +1,9 @@
 import { useContext, useEffect, useReducer, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import * as restaurantService from "../../services/restaurantService";
 import * as commentService from '../../services/commentService';
 import useForm from "../../hooks/useForm";
@@ -36,7 +39,6 @@ const RestaurantDetails = () => {
                 });
             } catch (error) {
                 console.error('Error fetching data:', error);
-                navigate(Path.NotFound);
             }
         };
     
@@ -64,10 +66,13 @@ const RestaurantDetails = () => {
 
             if(hasConfirmed) {
 
-                // try catch
-                await restaurantService.remove(restaurantId);
-
-                navigate('/gallery');
+                try {
+                    toast.success(`Successfully deleted ${restaurant.title}`);
+                    navigate('/gallery');
+                } catch (error) {
+                    console.error('Error deleting restaurant:', error);
+                    toast.error('Failed to delete restaurant. Please try again.');
+                }
             }
 
         }
