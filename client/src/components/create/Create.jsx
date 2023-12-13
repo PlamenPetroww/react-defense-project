@@ -43,18 +43,30 @@ const Create = ({ onClose }) => {
     }
    
     const [validate, setValidate] = useState('');
-
     const titleValidator = () => {
         if(formValues.title.length <= 0) {
             setValidate(state => ({
                 ...state,
                 title: 'Title is required!'
             }));
+            return;
         } else if (formValues.title.length <= 2) {
             setValidate(state => ({
                 ...state,
                 title: 'Title must be at least 2 characters!'
             }));
+        } else if(formValues.title === '' ) {
+          setValidate(state => ({
+            ...state,
+            title: 'Title is required!'
+        }));
+        return;
+        } else if (!formValues.title.trim()) {
+          setValidate(state => ({
+              ...state,
+              title: 'Title is required!'
+          }));
+          return;
         }
         else { 
             if(validate.title) {
@@ -72,6 +84,12 @@ const Create = ({ onClose }) => {
                 ...state,
                 chef: "Chef's name is required!"
             }));
+        } else if (formValues.chef === '') {
+          setValidate(state => ({
+              ...state,
+              chef: 'Chef is required!'
+          }));
+          return;
         }
         else { 
             if(validate.chef) {
@@ -197,32 +215,24 @@ const Create = ({ onClose }) => {
         }
       };
 
+
     const createProductSubmitHandler = async (e) => {
     e.preventDefault();
 
-    /* const requiredFields = [
-      'title', 'chef', 'city', 'category', 'stars', 'email', 'description', 'imageUrl'
-    ];
-
-    const errorMessages = {};
-
-    requiredFields.forEach((field) => {
-      if (formValues[field].trim() === '') {
-          errorMessages[field] = 'This field is required!';
-      }
-  }); */
-
-  /* if (Object.keys(errorMessages).length > 0) {
-    setValidate((state) => ({
-        ...state,
-        ...errorMessages,
-    }));
-    return;
-} */
-
-
   try {
         const restaurantData = Object.fromEntries(new FormData(e.currentTarget));
+        if(restaurantData.title === '' 
+        || restaurantData.chef === ''
+        || restaurantData.city === ''
+        || restaurantData.category === ''
+        || restaurantData.stars === ''
+        || restaurantData.email === ''
+        || restaurantData.imageUrl === ''
+        || restaurantData.description === ''
+        ) {
+          toast.error('All fields are required!')
+          return;
+        }
         
         await restaurantService.create(restaurantData);
 

@@ -49,6 +49,20 @@ const RestaurantEdit = () => {
 
             try {
                 const values = Object.fromEntries(new FormData(e.currentTarget));
+                
+                if(values.title === '' 
+                || values.chef === ''
+                || values.city === ''
+                || values.category === ''
+                || values.stars === ''
+                || values.email === ''
+                || values.imageUrl === ''
+                || values.description === ''
+                ) {
+                toast.error('All fields are required!')
+                return;
+                }
+                
                 await restaurantService.edit(restaurantId, values);
     
                 toast.success('Restaurant updated successfully');

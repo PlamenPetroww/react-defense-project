@@ -68,6 +68,7 @@ const RestaurantDetails = () => {
 
                 try {
                     toast.success(`Successfully deleted ${restaurant.title}`);
+                    await restaurantService.remove(restaurantId);
                     navigate('/gallery');
                 } catch (error) {
                     console.error('Error deleting restaurant:', error);
@@ -104,7 +105,8 @@ const RestaurantDetails = () => {
                 <p><strong>Restaurant description: </strong><br /> {restaurant.description}</p>
                 </div>
 
-                <div className="details-comments">
+                
+                    <div className="details-comments">
                     <h2>Comments:</h2>
                     <ul>
                         {comments.map(({ _id, text, owner: { email } }) => (
@@ -114,10 +116,11 @@ const RestaurantDetails = () => {
                         ))}
                     </ul>
 
-                    {comments.length === 0 && (
+                    {comments.length === 0 && userId !== restaurant._ownerId && (
                         <p className="no-comment">You can be the first to comment on the <strong>{restaurant.title}</strong> restaurant.</p>
                     )}
                 </div>
+                
                 
                 {userId === restaurant._ownerId && (
                 <div className="buttons-options">
