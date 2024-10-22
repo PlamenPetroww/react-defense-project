@@ -1,4 +1,5 @@
 FindRestaurant
+
 Welcome to FindRestaurant, a web platform designed for advertising restaurants. This platform allows users to register, log in, and interact with restaurant listings. Users can create, edit, and delete their own listings, as well as leave comments on various restaurant pages.
 
 Features
