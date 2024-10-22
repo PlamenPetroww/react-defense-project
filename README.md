@@ -17,7 +17,7 @@ Welcome to FindRestaurant, a web platform designed for restaurant advertisement.
 
 ## Installation and Running
 1. Clone this repository to your computer using the following command:
-git clone https://github.com/yourusername/FindRestaurant.git
+git clone https://github.com/PlamenPetroww/FindRestaurant.git
 2. Install the necessary dependencies with the command `npm install`.
 3. Start the server:
 Go to the server folder and run the following command to start the backend server:
