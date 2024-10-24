@@ -1,4 +1,5 @@
 # FindRestaurant
+![Restaurant](https://github.com/user-attachments/assets/42e79baa-bd29-480a-afee-64bdbd3fd0d1)
 
 Welcome to FindRestaurant, a web platform designed for restaurant advertisement. Users can register, log in, and interact with restaurant listings, including creating, editing, and deleting their own listings. Additionally, users can leave comments on restaurant pages.
 
